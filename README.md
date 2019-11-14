@@ -1,2 +1,2 @@
-# COMP 1950_final_project
+# COMP1950_final_project
 Final project of Comp 1950
