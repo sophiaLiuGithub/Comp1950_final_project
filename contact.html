@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Final Project</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+
+	<header>
+            
+	</header>
+	<main>
+        <h1>Contact your instructor</h1>
+        <div class="contact">
+            <form id="contact_form">
+            <fieldset id="fisrt_name">
+                <legend>Please enter your first name:</legend>
+                    <input type="text" id="fname" size="35" name="fname" value="" required />
+            </fieldset> <br />
+            <fieldset id="last_name">
+                    <legend>Please enter your last name:</legend>
+                        <input type="text" id="lname" size="35" name="lname" value="" required/>
+            </fieldset> <br />
+            <fieldset id="email_address">
+                    <legend>Please enter your email address:</legend>
+                        <input type="email" id="email" name="email" />
+            </fieldset> <br />
+            <fieldset id="student_number">
+                    <legend>Please enter your student number:</legend>
+                    <input type="text" id="stu_number" size="9" name="stu_number" value="" required/>
+            </fieldset> <br />
+            <fieldset id="student_condition">
+                    <legend>Please select your student condition:</legend>
+                    <input type="radio" id="prospective" name="stuCondition" value="prospective student" />prospective student <br />
+                    <input type="radio" id="current" name="stuCondition" value="current student" />current student <br />     
+            </fieldset> <br />
+            <fieldset id="student_comment">
+                <legend>Comments:</legend>
+                    <textarea id="comment" rows="10" cols="70"></textarea>
+                                
+            </fieldset> <br />
+            <fieldset id="buttons">
+                    <input type="reset" name="reset" id="btnReset" value="Clear" onclick="resetForm();" /> &nbsp;&nbsp;
+                    <input type="button" name="submit" id="btnSubmit" value="Submit" onclick="formValidation();"/>
+                    
+            </fieldset>
+        </form>
+        </div>
+        
+	</main>
+	<footer>
+		
+	</footer>
+
+    <script src= "./scripts/script.js"></script>
+</body>
+</html>
