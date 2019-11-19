@@ -1,1 +1,38 @@
 // Hamburger Styles
+.hamburger {
+    display: none;
+    
+    @include mq($tabletPortrait){
+        display: block;
+        border: none;
+        background-color: transparent;
+        padding: 0 0 33px 0;
+        margin: 0;
+        width: 37px;
+        height: 37px;
+        margin-right: 1em;
+        @include flex-center;
+        cursor: pointer;
+
+        .hamburger-icon {
+            color: $site-blue;
+            line-height: 1;
+            font-size: 3.4em;
+        }
+
+        .hamburger:focus,
+        .hamburger-icon:focus {
+            outline: none;
+        }
+
+        .hamburger:focus .hamburger-icon {
+            outline: 5px solid rgba($site-blue, 0.5);
+        }
+
+        .hamburger-text {
+            @include hide;
+        }
+
+    }
+
+}

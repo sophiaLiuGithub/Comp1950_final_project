@@ -1,0 +1,89 @@
+footer {
+    .social-content {
+        background-color: $site-lightblue;
+        @include flex-layout-row;
+        padding: $half-padding;
+
+        h2 {
+            color: $site-lightgray;
+            font-weight: 100;
+        }
+    }
+    .info-content {
+        background-color: $site-darkblue;
+        display: flex;
+        justify-content: space-between;
+        align-content: start;
+        padding: $half-padding;
+        color: $site-white;
+        
+        h2 {
+            font-size: 1.0em;
+            font-weight: 400;
+            padding-bottom: 5px;
+        }
+
+        p, address {
+            font-size: 0.9em;
+            font-style: normal;
+            line-height: 1.5em;
+        }
+
+        .sub-title {
+            color: $site-lightgray;
+            font-weight: 500;
+            line-height: 100%;
+            margin: 0;
+            padding-bottom: $half-padding;
+        }
+
+        .logo-footer {
+            flex: 2;
+            align-items: flex-start;
+            font-weight: 100;
+            font-size: 1.0em;
+        }
+        .logo-footer img {
+            width: 50px;
+        }
+
+        .compuses ul {
+            @include flatten(true);
+            padding-right: 100px;
+            padding-left: 40px;
+        }
+        
+        .compuses ul li a {
+            @include plain-link;
+            line-height: 1.6em;
+            font-size: 0.9em;
+        }
+
+        .compuses ul li a:hover {
+            text-decoration: underline;
+        }
+    }
+    .copy {
+        background-color: $site-darkblue;
+        color: $site-white;
+        font-weight: 100;
+        font-size: 0.8em;
+        border-top: solid 1px $site-lightblue;
+        padding: 10px $half-padding;
+    }
+
+    @include mq($phoneLandscape){
+        .info-content {
+            flex-wrap: wrap;
+
+            .logo-footer {
+                flex: 100%;
+                padding: 0 0 20px 0;
+            }        
+            .compuses ul {
+                padding: 0 20px 20px 0;
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,30 @@
+.banner {
+    position: relative;
+    
+    .slideshow {
+        @include aspect-ratio-box('cinema');
+        img {
+            @include img-cover;
+        }
+    }    
+    h1 {
+        font-size: 3em;
+        @include flatten;
+        position: absolute;
+        bottom: 10%;
+        left: 5%;
+        color: $site-white;
+        text-align: left;
+        text-shadow: 2px 2px 0 $site-darkblue;
+        white-space: nowrap;
+        font-family: $body-font;
+        font-weight: 800;
+    }
+
+    @include mq($phoneLarge) {
+        h1 {
+            font-size: 9vw;
+        }
+    }
+
+}

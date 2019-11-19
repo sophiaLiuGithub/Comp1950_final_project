@@ -1,1 +1,19 @@
 // Typography Styles
+body {
+    font-family: $body-font;
+    line-height: $line-height;
+}
+
+h1, h2, h3, p {
+    font-family: $heading-font;
+    margin: 0;
+}
+
+section h1 {
+    border-left: 5px solid $site-yellow;
+    padding-left: 5px;
+}
+
+main li {
+    line-height: 1.8;
+}

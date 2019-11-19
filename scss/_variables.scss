@@ -1,9 +1,63 @@
 //variables
 
-//colors
+// Site Colours
+$site-black: #0c090d;
+$site-white: white;
+$site-orange: #f15946;
+$site-yellow: #fff400;
+$site-blue: #003e6b;
+$site-darkblue: #002145;
+$site-lightblue: #3d69b6;
+$site-lightgray: #e8e8e8;
+$site-darkgray: #333333;
 
-//fonts
+// Text Colors
+$text-dark: $site-darkblue;
+$text-light: $site-lightblue;
 
-//margins
+// Fonts
+$body-font: 'Open Sans', sans-serif;
+$heading-font: 'Roboto', sans-serif;
+// Typographic Defualts
+$line-height: 1.4;
 
-//paddings
+// Site Width:
+$site-width: 1024px;
+
+// Spacing
+$space: 40;
+$padding: rem($space);
+$half-padding: rem(($space / 2));
+$padding-mobile: rem(($space - 10));
+$half-padding-mobile: rem((($space - 10) / 2));
+
+// Grid Values
+
+// Column Gutter value
+$gutter: 2; // Roughly equivalent to 2%
+
+$one-col: 100%;
+$two-col: colWidth(2);
+$three-col: colWidth(3);
+$four-col: colWidth(4);
+$five-col: colWidth(5);
+$six-col: colWidth(6);
+
+// Utility variables
+$hover: '&:hover, &:focus, &:active';
+
+// Media Query Breakpoints
+$desktopMedium: em(1250);
+$tabletLandscape: em(1024);
+$tabletPortrait: em(768);
+$phoneLandscape: em(670);
+$phoneLarge: em(580);
+$phonePortrait: em(420);
+
+// Aspect Ratios
+$aspect-ratios: (
+    'video': rp(16, 9),
+    'square': rp(1,1),
+    'cinema': rp(21,9),
+    'photo': rp(3,2)
+);

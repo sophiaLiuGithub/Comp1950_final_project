@@ -1,1 +1,6 @@
 // Wrapper styles
+.wrapper {
+    max-width: $site-width;
+    background-color: $site-white;
+    @include center;
+}
