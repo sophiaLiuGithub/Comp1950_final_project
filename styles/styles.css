@@ -14,10 +14,11 @@ body {
 
 body {
   font-family: "Open Sans", sans-serif;
-  line-height: 1.4; }
+  line-height: 1.5; }
 
 h1, h2, h3, p {
   font-family: "Roboto", sans-serif;
+  line-height: 1.5;
   margin: 0; }
 
 section h1 {
@@ -26,6 +27,10 @@ section h1 {
 
 section.intro-container h2 {
   font-size: 1.3em;
+  color: white;
+  padding-bottom: 10px; }
+
+section.intro-container p {
   color: white; }
 
 section.intro-container h2 span {
@@ -219,7 +224,11 @@ header nav {
     text-shadow: 2px 2px 0 #002145;
     white-space: nowrap;
     font-family: "Open Sans", sans-serif;
-    font-weight: 800; }
+    font-weight: 800;
+    line-height: 1.2em; }
+  .banner h1 span {
+    font-size: 0.8em;
+    line-height: 0.8em; }
   @media (max-width: 36.25em) {
     .banner h1 {
       font-size: 9vw; } }
@@ -232,7 +241,7 @@ header nav {
     padding: 1.25rem; }
   .intro-container .item1 {
     background-color: #e8e8e8;
-    margin: 20px 0px 20px 20px; }
+    margin: 20px; }
   .intro-container .item2 {
     background-color: #e8e8e8;
     margin: 20px; }
@@ -249,6 +258,25 @@ header nav {
       margin-bottom: 0px; }
     .intro-container .item2 {
       grid-column: span 2; } }
+
+.schedule-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(150px, auto);
+  grid-gap: 20px;
+  padding: 1.25rem; }
+  .schedule-container article {
+    border: solid 1px #3d69b6;
+    background-color: white;
+    padding: 1.25rem;
+    box-shadow: 0 1px 0 0 #e8e8e8, 0 1px 0 0 #e8e8e8 inset; }
+  .schedule-container article a {
+    padding-left: 18px;
+    background-image: url("../images/right-arrow.png");
+    background-position: 0;
+    background-repeat: no-repeat;
+    font-weight: 200;
+    font-size: 0.9em; }
 
 footer .social-content {
   background-color: #3d69b6;

@@ -19,6 +19,11 @@
         white-space: nowrap;
         font-family: $body-font;
         font-weight: 800;
+        line-height: 1.2em;
+    }
+    h1 span {
+        font-size: 0.8em;
+        line-height: 0.8em;
     }
 
     @include mq($phoneLarge) {

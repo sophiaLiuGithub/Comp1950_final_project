@@ -6,6 +6,7 @@ body {
 
 h1, h2, h3, p {
     font-family: $heading-font;
+    line-height: $line-height;
     margin: 0;
 }
 
@@ -16,6 +17,11 @@ section h1 {
 
 section.intro-container h2 {
     font-size: 1.3em;
+    color: $site-white;
+    padding-bottom: 10px;
+}
+
+section.intro-container p {
     color: $site-white;
 }
 
