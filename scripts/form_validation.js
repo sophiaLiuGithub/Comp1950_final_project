@@ -1,7 +1,6 @@
 //js file of COMP 1950 final project
-
-
 //function to do user input validation
+
 /* 
 requirement: 
 
