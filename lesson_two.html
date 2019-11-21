@@ -10,15 +10,153 @@
 <body>
 
 	<header>
+			<div class="header-row-01">
+					<h1 class="logo"><a href="./index.html"><img src="./images/logo.png" alt="BCIT"></a></h1>
+					<h2><span>COMP 1950</span><br>Web Development and Design2</h2>
+					<form class="form-search" method="get" action="#" role="search">
+						<input type="text" placeholder="Search BCIT" class="input-search">
+						<button type="submit" class="btn"></button>
+					</form>
+					<button class="hamburger" id="hamburger">
+						<span class="hamburger-content">
+							<span class="hamburger-icon" tabindex="-1">&#9776;</span>
+							<span class="hamburger-text">Menu</span>
+						</span>
+					</button>
+				</div>
+				<nav id="main-navigation">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="outline.html">About</a></li>
+						<li><a href="#0">Schedule</a></li>
+						<li><a href="lesstons.html">Lessons</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li class="apply"><a href="#0">HOW TO APPLY</a></li>
+					</ul>
+				</nav>
+			</header>
+			<main>
+				<div class="banner">
+					<div class="slideshow">
+						<img src="./images/home-banner01.png" alt="Computer code">
+						<img src="./images/home-banner02.jpg" alt="Computer on desk">
+						<img src="./images/home-banner03.jpg" alt="BCIT - Burnaby campus">
+					</div>
+					<h1>Web Development<br>and Design2</h1>
+				</div>
 	
 	</header>
 	<main>
+		<div class="lessons-fonts">
+			<h2><b>Agenda</b></h2>
+			<ul>
+				<li><b>Charsets</b></li>
+				<li><b>HTML,XHTML,HTML5</b></li>
+				<li><b>Semantics</b></li>
+			</ul>
+			<h3>Character sets and languages</h3>
+			<p>The W3C Recommends the UTF-8 Charset for web development. It includes special characters, and is well supported in common devices.</p>
+			<h3>Assign Character Set</h3>
+			<p>If it is not specified, a web browser will choose the character set it thinks is most appropriate, but it is a better practice for the developer to ensure the correct character set by applying the <i>meta</i> tag to the <i>head</i> section of every HTML page:</p>
+			<h3>HTML</h3>
+			<p>What started as a language defined by <i>SGML</i> (Standard Generalized Markup Language), HTML is used to mark up billions of pages, making up the bulk of the web.</p>
+			<ul>
+				<li>Late 1991, Tim Berners-Lee releases the first iteration of what would become HTML 2.0 (there was no real 1.0+)</li>
+				<li>HTML was a language created at the dawn of the Web, using SGML (Standard Generalized Markup Language) as a template</li>
+				<li>Over the next decade, various additions, improvements and changes are introduced</li>
+				<li>Most developers were new to the language and there were no real classes in it</li>
+				<li>People had to learn as they went along</li>
+				<li>A lot of early sites are poorly designed</li>
+			</ul>
+			<h3>XHTML</h3>
+			<p>The <i>XHTML specification</i> was the result of rewriting HTML 4.01 using the ruleset derived from <i>XML</i></p>
+			<ul>
+				<li>HTML 4.01 + XML = XHTML 1.0</li>
+				<li>Forces a higher standard of HTML.</li>
+				<li>Better, more predictable coding patterns.</li>
+				<li>Porting to HTML5 is easy (if you also observe <i>semantic</i> guidelines).</li>
+			</ul>
+			<h3>XHTML Rules</h3>
+			<ul>
+				<li>All elements must be properly nested</li>
+				<li>All tags must close.</li>
+				<li>All tag names must be in lower case</li>
+				<li>All attributes must be quoted</li>
+				<li>Documents must be well formed </li>
+				
+			</ul>
+			<h3>HTML5</h3>
+			<p>As of October 28, 2014, <i>HTML5 is the official W3C recommendation</i></p>
+			<p>HTML5 is more evolutionary then revolutionary. The bulk of previous HTML elements and attributes are maintained, with a few deprecations, and several additions.</p>
+			<p>Significant features include:</p>
+			<ul>
+				<li>Extremely simple Doctype: <!DOCTYPE html></li>
+				<li>Specifies how browsers should behave with imperfect code</li>
+				<li>Standardized Javascript API increases client side script compatibility across browsers</li>
+				<li>Backwards compatible - older versions of HTML can effectively be updated by simply changing the doctype to HTML5</li>
+				<li>Guiding principles: Enhance semantic coding, Support existing content</li>
+			</ul>
+			<h3>HTML5 Enhanced Semantic Coding</h3>
+			<p>It is crucial for all HTML content to be <i>semantically marked up</i>. This is how browsers, search engines, and screen readers make sense of online content.</p>
+			<p>HTML5 provides more than just adjustments to the markup, there are new, powerfully semantic elements:</p>
+			<ul>
+				<li> <i>section</i> is a tag representing a document or application section. in general, if you are planning to use a heading, start a new section. a section must contain a heading, and may contain article(s), possibly asides or even sub-sections </li>
+				<li><i>article</i> is an independent piece of content in a document (it could stand alone if removed from the page). an article might be a blog post, forum thread, news story, collection of product information, etc </li>
+				<li><i>aside</i> is for content "only slightly" related to the main page content. <i> asides </i> fill the role of a sidebar. if the content could be removed without reducing the meaning of the main content of the HTML document, then use an <i>aside</i></li>
+				<li><i>header</i> and<i> footer</i> are for the header or footer of a page</li>
+				<li><i>nav</i> represents an area of navigation</li>
+				<li><i>main</i> used for containing content that is focused on the central topic of the page. this content is usually unique to the page, and not shared by other pages (main will usually NOT contain navigations, footers, sidebars, etc)</li>
+
+			</ul>
+
+		</div>
 		
 	</main>
 	<footer>
+			<div class="social-content">
+					<h2>Connect with BCIT</h2>
+					<div class="social-icons">
+						<a href="#0" target="_blank" title="Facebook icon"><i class="fab fa-facebook-square" style="font-size:36px;;color:white;"></i></a>&nbsp;
+						<a href="#0" target="_blank" title="Twitter icon"><i class="fab fa-instagram" style="font-size:36px;;color:white;"></i></a>&nbsp;
+						<a href="#0" target="_blank" title="Instagram icon"><i class="fab fa-twitter-square" style="font-size:36px;;color:white;"></i></a>&nbsp;
+						<a href="#0" target="_blank" title="Snapchat icon"><i class="fab fa-snapchat-square" style="font-size:36px;;color:white;"></i></a>&nbsp;
+						<a href="#0" target="_blank" title="YouTube icon"><i class="fab fa-youtube-square" style="font-size:36px;;color:white;"></i></a>&nbsp;
+					</div>
+				</div>
+				<div class="info-content">
+					<h1 class="logo-footer"><a href="./index.html"><img src="./images/logo.jpg" alt="BCIT"></a></h1>
+					<nav class="compuses">
+						<ul>
+							<li><p class="sub-title">CAMPUSES</p></li>
+							<li><a href="#0">Burnaby</a></li>
+							<li><a href="#0">Downtown</a></li>
+							<li><a href="#0">Marine</a></li>
+							<li><a href="#0">Aerospace</a></li>
+							<li><a href="#0">Annacis Island</a></li>
+						</ul>
+					</nav>
+					<div class="findus">
+						<p class="sub-title">FIND US</p>
+						<h2>British Columbia Institute of Technology</h2>
+						<address> Willingdon Avenue<br>Burnaby, British Columbia<br>Canada,  V5G 3H2</address>
+						<p>Telephone: 604-434-5734</p>
+						<p>Toll-free (Can/US): 1-866-434-1610</p>
+					</div>
+				</div>
+				<div class="copy"><p>&copy; 2018 COMP 1950</p></div>
+			
+			</div>	
 		
 	</footer>
+	
 
 	<script src= "./scripts/script.js"></script>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="./scripts/slideshow.js"></script>
+<script src="./scripts/menu.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
