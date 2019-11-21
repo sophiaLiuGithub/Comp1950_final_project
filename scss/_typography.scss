@@ -10,6 +10,14 @@ h1, h2, h3, p {
     margin: 0;
 }
 
+section a {
+    @include plain-link($site-lightblue);
+    
+    #{$hover}{
+        text-decoration: underline;
+    }
+}
+
 section h1 {
     font-size: 1.3em;
     color: $site-darkblue;
@@ -30,6 +38,17 @@ section.intro-container h2 span {
     color: $site-yellow;
 } 
 
-main li {
+section.intro-container ul, section.schedule-container ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+section.intro-container ul li::before, section.schedule-container ul li::before {
+    content: "\2022";
+    color: $site-lightblue;
     line-height: 1.8;
+    list-style-type: square;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
