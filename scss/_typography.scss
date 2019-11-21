@@ -18,12 +18,12 @@ section a {
     }
 }
 
-section h1 {
+section h2 {
     font-size: 1.3em;
     color: $site-darkblue;
 }
 
-section.intro-container h2 {
+section.intro-container h3 {
     font-size: 1.3em;
     color: $site-white;
     padding-bottom: 10px;
@@ -33,7 +33,7 @@ section.intro-container p {
     color: $site-white;
 }
 
-section.intro-container h2 span {
+section.intro-container h3 span {
     font-size: 1.5em;
     color: $site-yellow;
 } 

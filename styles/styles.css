@@ -27,11 +27,11 @@ section a {
   section a:hover, section a:focus, section a:active {
     text-decoration: underline; }
 
-section h1 {
+section h2 {
   font-size: 1.3em;
   color: #002145; }
 
-section.intro-container h2 {
+section.intro-container h3 {
   font-size: 1.3em;
   color: white;
   padding-bottom: 10px; }
@@ -39,7 +39,7 @@ section.intro-container h2 {
 section.intro-container p {
   color: white; }
 
-section.intro-container h2 span {
+section.intro-container h3 span {
   font-size: 1.5em;
   color: #fff400; }
 
@@ -270,7 +270,7 @@ header nav {
     text-align: center; }
   .intro-container .item4 {
     grid-column: span 2; }
-  .intro-container .item h1 {
+  .intro-container .item h2 {
     border-bottom: solid 1px white; }
   @media (max-width: 41.875em) {
     .intro-container .item1 {
