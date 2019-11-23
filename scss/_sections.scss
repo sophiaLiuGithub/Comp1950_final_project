@@ -68,3 +68,113 @@
         grid-template-columns: 1fr;
     }
 }
+
+//contact page style
+.contact_form { 
+    padding: 30px 70px 50px;    
+    @media (max-width: $phoneLandscape){
+            padding:30px 25px 30px;            
+    }
+    .form_container{
+        margin-top: 10px;    
+        display: grid;        
+        grid-template-columns: auto auto;        
+        grid-template-rows: 10px repeat(4,minmax(100px, auto)) minmax(50px, 70px);
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+        
+        #field1{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        #field2{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        #field3{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+        #field4{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+        #field5{
+            grid-column-start: 1;
+            grid-column-end: span 2;
+            grid-row-start: 4;
+            grid-row-end: 5;
+        }
+        #field6{
+            grid-column-start: 1;
+            grid-column-end: span 2;
+            grid-row-start: 5;
+            grid-row-end: 6;
+        }
+        #field7{
+            grid-column-start: 1;
+            grid-column-end: span 2;
+            grid-row-start: 6;
+            grid-row-end: 7;
+        }
+        
+        .field:not(:last-child){            
+            justify-self:stretch;
+            padding:15px 15px;  
+            -webkit-box-shadow: 5px 5px 7px 2px rgba(105,100,123,0.88); 
+            box-shadow: 5px 5px 7px 2px rgba(105,100,123,0.88);            
+        }
+        #field7{
+            margin-bottom: 200px;
+            padding-top: 10px;
+        }   
+        //button style
+        #btnReset, #btnSubmit{                        
+            background: Silver; 
+            padding: 15px;
+            border-radius: 50px;
+            display: inline-block;
+            border: none;
+            transition: all 0.4s ease 0s;
+        }
+        
+        @media (max-width: $phoneLandscape){
+            margin-top: 10px;    
+            display: flex;        
+            flex-direction: column;
+            .field:not(:first-child){
+                margin-top:20px;
+            }
+            #field7{
+                margin-bottom: 0px;
+                padding-top: 10px;
+            }      
+        }
+        @media (max-width:$phoneLarge)
+        {
+            margin-top: 10px;    
+            display: flex;        
+            flex-direction: column;
+            .field:not(:first-child){
+                margin-top:20px;
+            }
+            #field7{
+                margin-bottom: 0px;
+                padding-top: 10px;
+            } 
+            #field6 textarea{
+                max-width: 300px;
+            }     
+        }
+    }
+    
+    
+}

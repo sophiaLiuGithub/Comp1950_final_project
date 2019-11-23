@@ -15,9 +15,23 @@ $site-darkgray: #333333;
 $text-dark: $site-darkblue;
 $text-light: $site-lightblue;
 
+$contact-btn-text-color: midnightblue;
+$contact-field-text-color:#404040;
+$contact-field-text-deco-color:#D8B1FF;
+
 // Fonts
 $body-font: 'Open Sans', sans-serif;
 $heading-font: 'Roboto', sans-serif;
+$contact-page-field-font: 'Alata', sans-serif;
+
+//font sizes
+$contact-page-headline-fontsize:3.0em;
+$contact-page-field-fontsize: 1.5em;
+$contact-page-btn-fontsize:1.5em;
+
+//font decoration colors
+$contact-page-field-deco-color: 3px solid #D8B1FF;
+
 // Typographic Defualts
 $line-height: 1.5;
 

@@ -6,11 +6,13 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>COMP 1950 - Contact</title>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:100,300,400,500,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
 <body class="pg-contact">
         <div class="wrapper">
+                
                 <header>
                         <div class="header-row-01">
                                     <h1 class="logo"><a href="./index.html"><img src="./images/logo.png" alt="BCIT"></a></h1>
@@ -36,46 +38,49 @@
                                             <li class="apply"><a href="#0">HOW TO APPLY</a></li>
                             </ul>
                         </nav>
-                    </header>
-	<main>
-        <h1>Contact your instructor</h1>
-        <div class="contact">
-            <form id="contact_form">
-            <fieldset id="fisrt_name">
-                <legend>Please enter your first name:</legend>
-                    <input type="text" id="fname" size="35" name="fname" value="" required />
-            </fieldset> <br />
-            <fieldset id="last_name">
-                    <legend>Please enter your last name:</legend>
-                        <input type="text" id="lname" size="35" name="lname" value="" required/>
-            </fieldset> <br />
-            <fieldset id="email_address">
-                    <legend>Please enter your email address:</legend>
-                        <input type="email" id="email" name="email" />
-            </fieldset> <br />
-            <fieldset id="student_number">
-                    <legend>Please enter your student number:</legend>
-                    <input type="text" id="stu_number" size="9" name="stu_number" value="" required/>
-            </fieldset> <br />
-            <fieldset id="student_condition">
-                    <legend>Please select your student condition:</legend>
-                    <input type="radio" id="prospective" name="stuCondition" value="prospective student" />prospective student <br />
-                    <input type="radio" id="current" name="stuCondition" value="current student" />current student <br />     
-            </fieldset> <br />
-            <fieldset id="student_comment">
-                <legend>Comments:</legend>
-                    <textarea id="comment" rows="10" cols="70"></textarea>
+                </header>
+	        <main class="contact">
+                        <section class="contact_form"> 
+                        <h1>contact your instructor</h1>
                                 
-            </fieldset> <br />
-            <fieldset id="buttons">
-                    <input type="reset" name="reset" id="btnReset" value="Clear" onclick="resetForm();" /> &nbsp;&nbsp;
-                    <input type="button" name="submit" id="btnSubmit" value="Submit" onclick="formValidation();"/>
-                    
-            </fieldset>
-        </form>
-        </div>
+                                <form>
+                                <div class="form_container">
+                                <div id="field1" class="field" >
+                                        <label><span>please enter your first name:</span></label><br />
+                                        <input type="text" id="fname" size="35" name="fname" value="" required />
+                                </div>
+                                <div id="field2" class="field">
+                                        <label><span>please enter your last name:</span></label><br />
+                                        <input type="text" id="lname" size="35" name="lname" value="" required/>
+                                </div>
+                                <div id="field3" class="field" >
+                                        <label><span>please enter your E-Mail:</span></label><br />
+                                        <input type="email" id="email" name="email" size="35" />
+                                </div>
+                                <div id="field4" class="field" >
+                                        <label><span>please enter your student number:</span></label><br />
+                                        <input type="text" id="stu_number" size="9" name="stu_number" value="" required/>
+                                </div>
+                                <div id="field5" class="field" >
+                                        <label><span>please select your student status:</span></label><br />
+                                        <input type="radio" id="prospective" name="stuCondition" value="prospective student" /><span>prospective student</span><br />
+                                        <input type="radio" id="current" name="stuCondition" value="current student" /><span>current student</span><br /> 
+                                </div>
+                                <div id="field6" class="field">
+                                        <label><span>comments:</span></label><br />                                 
+                                        <textarea id="comment" rows="10" cols="70"></textarea>
+                                </div>
+                                <div id="field7" class="field">
+                                        <input type="reset" name="reset" id="btnReset" value="Clear" onclick="resetForm();" /> &nbsp;&nbsp;
+                                        <input type="button" name="submit" id="btnSubmit" value="Submit" onclick="formValidation();"/>
+                                </div>
+                                </div>
+                                </form>
+                                
+                                
+                        </section>                       
+                </main>
         
-	</main>
 	<footer>
                 <div class="social-content">
                         <h2>Connect with BCIT</h2>

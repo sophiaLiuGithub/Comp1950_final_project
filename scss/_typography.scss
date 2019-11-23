@@ -52,3 +52,42 @@ section.intro-container ul li::before, section.schedule-container ul li::before 
     width: 1em;
     margin-left: -1em;
 }
+
+//contact page typo setting
+section.contact_form h1{
+    font-size: $contact-page-headline-fontsize;
+    color: $site-darkblue;   
+    text-transform: capitalize;
+    @media (max-width: $tabletLandscape){
+        font-size: 1.8em;
+    }
+}
+//make the first letter of each field become uppercase
+section.contact_form label span:first-letter{
+    text-transform: capitalize;
+   
+}
+//contact page field typo style
+section.contact_form label span{
+    font-family:  $contact-page-field-font;
+    font-size: $contact-page-field-fontsize;
+    background: linear-gradient(#fff 75%, $contact-field-text-deco-color 0%) !important;
+    font-weight:bold; 
+    color: $contact-field-text-color;    
+    display:inline-block;     
+    @media (max-width: $tabletLandscape){
+        font-size: 1.1em;
+    }
+}
+
+//cantact page button typo style
+section.contact_form #btnReset, #btnSubmit{
+    color: $contact-btn-text-color;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: $contact-page-btn-fontsize;
+    @media (max-width: $phoneLandscape){
+        font-size: 1.2em;
+    }
+}

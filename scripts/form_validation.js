@@ -9,7 +9,7 @@ requirement:
 --check if user input is a number
 
 2. email
---can be balnk
+--can not be balnk
 --check if it fits the required format, e.g. abc123@gmail.com
 
 3. student number:
@@ -114,17 +114,17 @@ function checkEmail(email)
 	var pattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 	if(isInputBlank(email))
 	{
-		isEmailValid = true;
-	}else
+		isEmailValid = false;
+		alert("Please enter your email!");
+	}else if(pattern.test(email)==false)
 	{
-		if(pattern.test(email)==false)
-		{
-			alert("The format of email is incorrect.\nPlease enter your email again.\nThank you!");
-			isEmailValid = false;
-		}else{			
-			isEmailValid = true;		
-		}
-	} 	
+		
+		alert("The format of email is incorrect.\nPlease enter your email again.\nThank you!");
+		isEmailValid = false;
+	}else
+	{			
+		isEmailValid = true;		
+	}		
 	return isEmailValid;
 }
 

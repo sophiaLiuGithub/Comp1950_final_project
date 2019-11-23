@@ -56,6 +56,38 @@ section.intro-container ul li::before, section.schedule-container ul li::before 
   width: 1em;
   margin-left: -1em; }
 
+section.contact_form h1 {
+  font-size: 3em;
+  color: #002145;
+  text-transform: capitalize; }
+  @media (max-width: 64em) {
+    section.contact_form h1 {
+      font-size: 1.8em; } }
+
+section.contact_form label span:first-letter {
+  text-transform: capitalize; }
+
+section.contact_form label span {
+  font-family: "Alata", sans-serif;
+  font-size: 1.5em;
+  background: linear-gradient(#fff 75%, #D8B1FF 0%) !important;
+  font-weight: bold;
+  color: #404040;
+  display: inline-block; }
+  @media (max-width: 64em) {
+    section.contact_form label span {
+      font-size: 1.1em; } }
+
+section.contact_form #btnReset, #btnSubmit {
+  color: midnightblue;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.5em; }
+  @media (max-width: 41.875em) {
+    section.contact_form #btnReset, #btnSubmit {
+      font-size: 1.2em; } }
+
 body {
   background-color: #e8e8e8; }
 
@@ -306,6 +338,91 @@ header nav {
   @media (max-width: 36.25em) {
     .schedule-container {
       grid-template-columns: 1fr; } }
+
+.contact_form {
+  padding: 30px 70px 50px; }
+  @media (max-width: 41.875em) {
+    .contact_form {
+      padding: 30px 25px 30px; } }
+  .contact_form .form_container {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 10px repeat(4, minmax(100px, auto)) minmax(50px, 70px);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px; }
+    .contact_form .form_container #field1 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3; }
+    .contact_form .form_container #field2 {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3; }
+    .contact_form .form_container #field3 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4; }
+    .contact_form .form_container #field4 {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 3;
+      grid-row-end: 4; }
+    .contact_form .form_container #field5 {
+      grid-column-start: 1;
+      grid-column-end: span 2;
+      grid-row-start: 4;
+      grid-row-end: 5; }
+    .contact_form .form_container #field6 {
+      grid-column-start: 1;
+      grid-column-end: span 2;
+      grid-row-start: 5;
+      grid-row-end: 6; }
+    .contact_form .form_container #field7 {
+      grid-column-start: 1;
+      grid-column-end: span 2;
+      grid-row-start: 6;
+      grid-row-end: 7; }
+    .contact_form .form_container .field:not(:last-child) {
+      justify-self: stretch;
+      padding: 15px 15px;
+      -webkit-box-shadow: 5px 5px 7px 2px rgba(105, 100, 123, 0.88);
+      box-shadow: 5px 5px 7px 2px rgba(105, 100, 123, 0.88); }
+    .contact_form .form_container #field7 {
+      margin-bottom: 200px;
+      padding-top: 10px; }
+    .contact_form .form_container #btnReset, .contact_form .form_container #btnSubmit {
+      background: Silver;
+      padding: 15px;
+      border-radius: 50px;
+      display: inline-block;
+      border: none;
+      transition: all 0.4s ease 0s; }
+    @media (max-width: 41.875em) {
+      .contact_form .form_container {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column; }
+        .contact_form .form_container .field:not(:first-child) {
+          margin-top: 20px; }
+        .contact_form .form_container #field7 {
+          margin-bottom: 0px;
+          padding-top: 10px; } }
+    @media (max-width: 36.25em) {
+      .contact_form .form_container {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column; }
+        .contact_form .form_container .field:not(:first-child) {
+          margin-top: 20px; }
+        .contact_form .form_container #field7 {
+          margin-bottom: 0px;
+          padding-top: 10px; }
+        .contact_form .form_container #field6 textarea {
+          max-width: 300px; } }
 
 footer .social-content {
   background-color: #3d69b6;
