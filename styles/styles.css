@@ -563,7 +563,7 @@ header nav {
     grid-row-end: 7; }
   .lessons-container .enter {
     transition: 1.2s;
-    visibility: 0.8;
+    visibility: visible;
     opacity: 0.6; }
     .lessons-container .enter .title {
       animation: titleFadeIn 1.0s;

@@ -175,7 +175,7 @@
 
 @mixin imageFadeOut{
     transition: 1.2s;
-    visibility: 0.8;
+    visibility: visible;
     opacity: 0.6;
 } 
 //tablet columns
