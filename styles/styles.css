@@ -13,7 +13,7 @@ body {
   margin: 0; }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.5; }
 
 h1, h2, h3, p {
@@ -293,7 +293,7 @@ header nav {
     text-align: left;
     text-shadow: 2px 2px 0 #002145;
     white-space: nowrap;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 800;
     line-height: 1.2em; }
   .banner h1 span {
