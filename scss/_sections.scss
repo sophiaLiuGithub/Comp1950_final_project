@@ -360,3 +360,16 @@
     }
 }
 //lessons page style ends
+
+//lessons sub pages layout
+//lesson 3 
+section.lesson3-container{
+    margin: 10px 50px;
+    .lesson3{
+        margin-top:10px;    
+        padding:0px 50px;    
+    }
+    .less3-content:nth-child(odd){
+        background-color: gery;
+    }
+}

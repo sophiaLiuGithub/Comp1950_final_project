@@ -40,7 +40,7 @@
                         </nav>
                 </header>
 				<main>
-				<section class="pg-lesson3">	
+				<section class="lesson3-container">	
 				<div class="lesson-content">
 					<h1>Lesson 3</h1>
 						<section class="lesson3 agenda">
@@ -145,7 +145,7 @@
 								</section>
 
 								<section class="type">
-								<h3>Grouping Stylesheets</h3>
+								<h4>Grouping Stylesheets</h4>
 								<p>If more than one link tag shares the same <span>title=""</span> then they will be grouped together.</p>
 								<p class="code">&lt;!-- group stylesheets with shared title="" --><br />
 								&lt;link rel="alternate stylesheet"<br />
@@ -175,9 +175,9 @@
 								<h3>@charset: Assigning CSS Character Set</h3>
 								<p>If your CSS files only contain standard keyboard characters, assigning the character set is not required. The CSS language itself does not use any exotic characters, so assigning a charset is often omitted. If, however, your CSS needs to use special characters, ensuring the correct character set can be very important. Eg: When using a pseudoclass to add content to HTML <span>content: "Awesome!"</span></p>
 								<p>If needed, add the <span>@charset</span> rule to the top of the CSS document.</p>
-								<p class="code"><span>/* assign charset at top of .css file */<br />
-								@charset "utf-8";</span></p>
-								<p><span>/* CSS rules follow... */</span></p>
+								<p class="code">/* assign charset at top of .css file */<br />
+								@charset "utf-8";<br />
+								/* CSS rules follow... */</p>
 							</article>
 
 							<article class="less3-content">
@@ -189,22 +189,18 @@
 									<li><a href="https://www.fontsquirrel.com/" target="_blank">•	Font Squirrel</a></li>
 									<li>Plenty more available online...</li>
 								</ul>
-							</article>
-
-							<article class="less3-content">
-								<h3>Third Party Font Server</h3>
+							
+								<h4>Third Party Font Server</h4>
 								<p>Browse the font server site, select the fonts you like and they will provide you with code for a <span>&lt;link /></span> tag to add to your HTML. You can then use the font in your CSS.</p>
-								<p>&lt;!-- add the link tag to the HTML --><br />
-								&lt;link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet" /></span></p>
-								<p class="code"><span>/* use the font in the CSS */<br />
+								<p class="code">&lt;!-- add the link tag to the HTML --><br />
+								&lt;link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet" /><br />
+								/* use the font in the CSS */<br />
 								selector{<br />
-									<span>font-family: 'Bungee', cursive;</span><br />
+									font-family: 'Bungee', cursive;<br />
 								}</p>
 								<p>No longer stuck with 'Arial', 'Helvetica', 'Georgia' and the rest.</p>
-							</article>
-
-							<article class="less3-content">
-								<h3>Serve Fonts From Your Website</h3>
+							
+								<h4>Serve Fonts From Your Website</h4>
 								<p>If the font(s) are copyright free, or if you have license to distribute a font, you can serve them yourself using the CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face" target="_blank">@font-face</a> directive.</p>
 								<p>Different client systems will need fonts in varying formats, so if you are distributing the font yourself, be sure to have the font available in most common formats.</p>
 								<ul>
@@ -233,7 +229,7 @@
 								<h3>CSS Measurements</h3>
 								<p>In CSS, there are a number of measurement values that can be used in declarations.</p>
 								
-								<h3>Size measurements</h3>
+								<h4>Size measurements</h4>
 								<ul>
 									<li><span>px</span> - Pixels is one of the most common measuring types. It is specific to computers, as it renders based on the pixel-display of all monitors. Great for specific measurements on boxes and borders, but for fonts, it can lead to difficulty as some browsers don't allow scaling and font can end up too small.</li>
 									<li><span>%</span> - Percentage measurements are also very common.</li>
@@ -245,9 +241,8 @@
 									<li><span>vh, vw, vmin, vmax</span> - size relative to viewport widths and heights. very useful for scaling, though may not enjoy full support yet.</li>
 									<li><span>named</span> - This refers to fonts and a few other elements. The named sizes are xx-small, x-small, small, medium, large, x-large, xx-large. They are relative to the browsers base font size.</li>
 								</ul>
-							</article>	
-							<article class="less3-content">
-								<h3>Color Measurement</h3>
+							
+								<h4>Color Measurement</h4>
 								<p>Colors can be specified in a number of ways, corresponding to the system that your organization or visual element requires. Almost all color systems use a method for expressing a combination of the three-color spaces used for displaying colors on computer monitors: Red Green and Blue.</p>
 								<ul>
 									<li><span>Hex: #003366</span> - One of the most common systems, it combines 2 digits each for Red Green and Blue. Each hex pair stand stands for digits between 00 and FF in hexadecimal.</li>
@@ -259,10 +254,10 @@
 							</article>
 
 							<article class="less3-content">						
-								<h2>Compact CSS Code</h2>
+								<h3>Compact CSS Code</h3>
 								<p>When building your CSS rules, there are some easy ways to compact your code, reducing code bloat and file size.</p>
 								
-								<h3>Grouping selectors</h3>
+								<h4>Grouping selectors</h4>
 								<ul>
 										<li>If you would like to apply the same style to a multitude of different selectors, you can group them with the comma</li>
 										<li><span>h1, h2, h3, h4, h5 { color: red; }</span></li>
@@ -279,7 +274,7 @@
 									<li>Case is important! Remember to use a single rule for CSS naming and stick with it</li>
 								</ul>
 
-								<h3>Rule Compacting</h3>
+								<h4>Rule Compacting</h4>
 								<p>There are a lot of rules that will accept a compacted ruleset:</p>
 								<ul>
 										<li><a href="https://developer.mozilla.org/en/docs/Web/CSS/margin" target="_blank">margin</a>: top right bottom left;</li>
@@ -324,9 +319,9 @@
 							</article>
 
 							<article class="less3-content">
-								<h2>CSS Selectors</h2>
+								<h3>CSS Selectors</h3>
 								<p>There are several <a href="http://css.maxdesign.com.au/selectutorial/" target="_blank">advanced CSS selector techniques</a> that provide plenty of options for the application of style.</p>
-								<h3>Universal Selector</h3>
+								<h4>Universal Selector</h4>
 								<ul>
 									<li>This is a fairly widely supported selector: the asterisk <span>*</span>.</li>
 									<li>Use it to specify a global rule.</li>
@@ -334,7 +329,7 @@
 									<li>The universal selector can be very powerful, as it can command a lot of changes to your styles.</li>
 								</ul>
 
-								<h3>Pseudo-classes</h3>
+								<h4>Pseudo-classes</h4>
 								<p>A Pseudo-class is a selector that allows you to reference a specific action or attribute of an element. This is most often used when specifying <span>a</span> attributes, such as <span>:visited</span> and <span>:link</span>.</p>
 								<p>There are other uses for pseudo elements, that will allow for greater detail in styling content, such as <span>:first-letter</span> and <span>:first-line</span>. These allow the browser to apply a style based on an unselected, but displayed element.</p>
 								<p><em>Best part</em>: No <span>span</span> or <span>div</span> required to access these pseudo-elements.</p>
@@ -363,7 +358,7 @@
 									</li>
 								</ul>
 
-								<h3>Descendant Selectors</h3>
+								<h4>Descendant Selectors</h4>
 								<ul>
 									<li>Separated by a space, the last element is the one being styled</li>
 									<li><span>h1 em</span> will apply rules to all em's within an h1</li>
@@ -374,7 +369,7 @@
 									<li><span>p em</span> will match ANY em that descends from a paragraph, no matter how nested</li>
 								</ul>
 
-								<h3>Child Selectors</h3>
+								<h4>Child Selectors</h4>
 								<ul>
 									<li>Uses the > combinator to specify children</li>
 									<li>Will select an element that is directly descended from another element</li>
@@ -382,21 +377,21 @@
 									<li>Will not select a span tag embedded in any other tag (even if it is within a paragraph)</li>
 								</ul>
 
-								<h3>Adjacent Sibling Selectors</h3>
+								<h4>Adjacent Sibling Selectors</h4>
 								<ul>
 									<li>The + combinator specifies the first sibling tag following the root</li>
 									<li>It will not include the root for styling</li>
 									<li><span>div + h2</span> will select the first sibling h2 following a div tag</li>
 								</ul>
 
-								<h3>General Sibling Selectors</h3>
+								<h4>General Sibling Selectors</h4>
 								<ul>
 									<li>The ~ combinator specifies all siblings tags following the root</li>
 									<li>It will not select sibling tags that precede the root, nor will it include the root</li>
 									<li><span>h1 ~ h2</span> will select all sibling h2 tags that follow an h1</li>
 								</ul>
 
-								<h3>Attribute Selectors</h3>
+								<h4>Attribute Selectors</h4>
 								<ul>
 									<li>You can also select elements by what the element contains</li>
 									<li>The method is: <span>element[attribute=value]</span></li>
@@ -417,7 +412,7 @@
 							</article>
 
 							<article class="less3-content">
-								<h2>Rule Order &amp; Specificity</h2>
+								<h3>Rule Order &amp; Specificity</h3>
 								<p>When a style declaration is found to be in conflict with a previously declared style, there is a method for determining which one will win out. The process is built into every web browser, and almost all of them calculate the values identically (for once!).</p>
 								<p>Here is how the W3C defines the process by which style order is determined:</p>
 								<ul>
@@ -433,7 +428,7 @@
 								<p>All of the rules are pretty straightforward, except for Specificity, which bears some explanation.</p>
 								<p><span>Specificity</span> is a method for determining what rules are applied when a conflict between two selectors occurs. Through a method of adding values when certain elements and selectors are present, a specificity number can be applied to any CSS rule. The one with highest specificity wins and the associated rule is applied to the element(s) in question.</p>
 								
-								<h3>Ruleset for Specificity</h3>
+								<h4>Ruleset for Specificity</h4>
 								<p>Style sheets can also override conflicting style sheets based on their level of specificity, where a more specific style will always win out over a less specific one. It is simply a counting game to calculate the specificity of a selector.</p>
 								<ol>
 									<li>Count the number of IDs in the selector.</li>
@@ -448,7 +443,7 @@
 									<li>LI<br />/* <span>id</span>=0 <span>class</span>=0 <span>HTML</span>=1 --> specificity = 001 */</li>
 								</ul>
 								
-								<h3>!important rule</h3>
+								<h4>!important rule</h4>
 								<ul>
 									<li>This declaration, when added to a rule, will override almost all other declarations, with no respect for specificity.</li>
 									<li>It indicates that this rule should take over any previous rules that might govern a specific element.</li>
@@ -467,7 +462,7 @@
 								</ul>
 							</section>
 						</div>       
-					</div>
+					
 				</section>
 			</main>
         
@@ -504,7 +499,7 @@
                 </div>
             <div class="copy"><p>&copy; 2018 COMP 1950</p></div>
         </footer>
-        </div>   
+    </div>       
     <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

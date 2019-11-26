@@ -4,7 +4,7 @@ body {
     line-height: $line-height;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h4 p {
     font-family: $heading-font;
     line-height: $line-height;
     margin: 0;
@@ -129,8 +129,33 @@ section.lessons-container .content{
     text-shadow:none;
     text-transform: capitalize;
     font-weight: bold;
-    font-family: $lessons-page-content-font;
-    
+    font-family: $lessons-page-content-font;    
 }
+
+//lessons 3 page typo style
+section.lesson3-container h1{
+    @include lessons-subpage-h1;
+}
+section.lesson3-container h2{
+    @include lessons-subpage-h2;
+}
+section.lesson3-container h3{
+    @include lessons-subpage-h3;
+}
+section.lesson3-container h4{
+    @include lessons-subpage-h4;
+}
+section.lesson3-container p{
+    @include lessons-subpage-p;
+}
+
+section.lesson3-container span{    
+    @include lessons-subpage-span;
+}
+section.lesson3-container .code{    
+    @include lessons-subpage-code;
+}
+
+
 
 
