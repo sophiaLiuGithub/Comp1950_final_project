@@ -23,6 +23,15 @@ section h2 {
     color: $site-darkblue;
 }
 
+section h1 {
+    color: $site-darkblue;
+    font-size: 2em;
+    font-weight: 400;
+    line-height: 40px;
+    border-left: 3px solid $site-blue;
+    padding-left: 7px;
+}
+
 section.intro-container h3 {
     font-size: 1.3em;
     color: $site-white;
@@ -54,14 +63,14 @@ section.intro-container ul li::before, section.schedule-container ul li::before 
 }
 
 //contact page typo style
-section.contact_form h1{
-    font-size: $contact-page-headline-fontsize;
-    color: $site-darkblue;   
-    text-transform: capitalize;
-    @media (max-width: $tabletLandscape){
-        font-size: 1.8em;
-    }
-}
+//section.contact_form h1{
+    // font-size: $contact-page-headline-fontsize;
+    // color: $site-darkblue;   
+    // text-transform: capitalize;
+    // @media (max-width: $tabletLandscape){
+    //     font-size: 1.8em;
+    // }
+//}
 //make the first letter of each field become uppercase
 section.contact_form label span:first-letter{
     text-transform: capitalize;
@@ -72,7 +81,7 @@ section.contact_form label span{
     font-family:  $contact-page-field-font;
     font-size: $contact-page-field-fontsize;
     background: linear-gradient(#fff 75%, $contact-field-text-deco-color 0%) !important;
-    font-weight:bold; 
+    font-weight:300; 
     color: $contact-field-text-color;    
     display:inline-block;     
     @media (max-width: $tabletLandscape){
@@ -94,12 +103,12 @@ section.contact_form #btnReset, #btnSubmit{
 
 //lessons page typo style
 //headline style
-section.lessons-container h1{
-    font-size:3.0em;
-    color: $lessons-headline-text-color;
-    text-transform: capitalize;
+// section.lessons-container h1{
+//     font-size:3.0em;
+//     color: $lessons-headline-text-color;
+//     text-transform: capitalize;
     
-}
+// }
 section.lessons-container .title{
         color:$lessons-page-title-dark;
         font-size: 1.4em; 
