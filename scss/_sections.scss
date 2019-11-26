@@ -175,6 +175,180 @@
             }     
         }
     }
-    
-    
 }
+
+//lessons page style
+.lessons-container{
+    padding: 20px 30px; 
+    display: grid;        
+    grid-template-columns: 10px repeat(3,minmax(100px, auto)) 10px;        
+    grid-template-rows: 10px 50px repeat(4,minmax(100px, auto)) 10px;
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+    
+    h1{
+        grid-column-start: 2;
+        grid-column-end: span 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .title{
+        position: absolute;  
+        left: 20%;                       
+        top: 10%;                        
+        transform: translate(-50%, -50%);
+    }
+    .lesson{
+        height: 200px;
+        position: relative; 
+    }
+    
+    .content{
+        position: absolute;  
+        left: 50%;                       
+        top: 50%;                        
+        transform: translate(-50%, -50%);        
+    }
+    
+    #less1{
+        @include lessons-desktop-2ndCol();
+        @include lessons-desktop-2ndtRow();
+    }
+    #less2{
+        @include lessons-desktop-3rdCol();
+        @include lessons-desktop-2ndtRow();
+    }
+    #less3{
+        @include lessons-desktop-4thCol();
+        @include lessons-desktop-2ndtRow();
+    }
+    #less4{
+        @include lessons-desktop-2ndCol();
+        @include lessons-desktop-3rdRow();
+    }
+    #less5{
+        @include lessons-desktop-3rdCol();
+        @include lessons-desktop-3rdRow();
+    }
+    #less6{
+        @include lessons-desktop-4thCol();
+        @include lessons-desktop-3rdRow();
+    }
+    #less7{
+        @include lessons-desktop-2ndCol();
+        @include lessons-desktop-4thRow();
+    }
+    #less8{
+        @include lessons-desktop-3rdCol();
+        @include lessons-desktop-4thRow();
+    }
+    #less9{
+        @include lessons-desktop-4thCol();
+        @include lessons-desktop-4thRow();
+    }
+    #less10{
+        @include lessons-desktop-2ndCol();
+        @include lessons-desktop-5thRow();
+    }
+    #less11{
+        @include lessons-desktop-3rdCol();
+        @include lessons-desktop-5thRow();
+    }
+    #less12{
+        @include lessons-desktop-4thCol();
+        @include lessons-desktop-5thRow();
+    }
+    //class created for fade in/out effect
+    .enter{
+        //image fade out 
+        @include imageFadeOut(); 
+        //title fade in  
+        .title{            
+            animation: titleFadeIn 1.0s;
+            animation-fill-mode: forwards;  
+        }
+        //content fade in
+        .content{
+            animation: contentFadeIn 1.0s;
+            animation-fill-mode: forwards;            
+        }          
+    }
+    //tablet grid laout
+    @media (max-width: $tabletPortrait){
+        display: grid;        
+        grid-template-columns: 10px repeat(2,minmax(100px, auto)) 10px;        
+        grid-template-rows: 10px 50px repeat(6,minmax(100px, auto)) 10px;
+        grid-row-gap: 15px;
+        grid-column-gap: 15px;
+        h1{
+            grid-column-start: 2;
+            grid-column-end: span 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        #less1{
+            @include lessons-tablet-2ndCol();
+            @include lessons-tablet-2ndRow();
+        }
+        #less2{
+            @include lessons-tablet-3rdCol();
+            @include lessons-tablet-2ndRow();
+        }
+        #less3{
+            @include lessons-tablet-2ndCol();
+            @include lessons-tablet-3rdRow();
+        }
+        #less4{
+            @include lessons-tablet-3rdCol();
+            @include lessons-tablet-3rdRow();
+        }
+        #less5{
+            @include lessons-tablet-2ndCol();
+            @include lessons-tablet-4thRow();
+        }
+        #less6{
+            @include lessons-tablet-3rdCol();
+            @include lessons-tablet-4thRow();
+        }
+        #less7{
+            @include lessons-tablet-2ndCol();
+            @include lessons-tablet-5thRow();
+        }
+        #less8{
+            @include lessons-tablet-3rdCol();
+            @include lessons-tablet-5thRow();
+        }
+        #less9{
+            @include lessons-tablet-2ndCol();
+            @include lessons-tablet-6thRow();
+        }
+        #less10{
+            @include lessons-tablet-3rdCol();
+            @include lessons-tablet-6thRow();
+        }
+        #less11{
+            @include lessons-tablet-2ndCol();
+            @include lessons-tablet-7thRow();
+        }
+        #less12{
+            @include lessons-tablet-3rdCol();
+            @include lessons-tablet-7thRow();
+        }
+    }
+    //cellphone grid layout
+    @media (max-width: $phoneLarge){
+        display: flex;
+        flex-direction: column;
+        //margin:10px 30px;
+        .lesson{
+            margin-top: 10px;
+            margin-left: 50px;
+            margin-right: 50px;                
+            img{
+                max-height:100%; 
+                width:420px;
+            }            
+        }
+    }
+}
+//lessons page style ends

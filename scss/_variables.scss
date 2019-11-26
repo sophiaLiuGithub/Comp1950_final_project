@@ -19,18 +19,36 @@ $contact-btn-text-color: midnightblue;
 $contact-field-text-color:#404040;
 $contact-field-text-deco-color:#D8B1FF;
 
+$lessons-headline-text-color:midnightblue;
+$lessons-page-title-dark:#444444;
+$lessons-page-title-light:white;
+$lessons-page-content-dark:black;
+$lessons-page-content-light:white;
+
+
 // Fonts
 $body-font: 'Open Sans', sans-serif;
 $heading-font: 'Roboto', sans-serif;
 $contact-page-field-font: 'Alata', sans-serif;
+$lessons-page-title-font:  'Titillium Web', sans-serif;
+$lessons-page-content-font:'Ubuntu', sans-serif;
 
 //font sizes
 $contact-page-headline-fontsize:3.0em;
 $contact-page-field-fontsize: 1.5em;
 $contact-page-btn-fontsize:1.5em;
+$lessons-page-headline-fontsize:3.0em;
+$lessons-page-title-fonesize:1.4em; 
+$lessons-page-content-fonesize-before:1.6em;
+$lessons-page-content-fonesize-after:1.8em;
 
 //font decoration colors
 $contact-page-field-deco-color: 3px solid #D8B1FF;
+
+$lessons-page-title-bgcolor-light:#BBFFEE; 
+$lessons-page-title-bgcolor-dark:#008844;
+//text shadows
+$lessons-page-content-textshadow:6px 2px 2px rgba(96, 255, 140, 1);
 
 // Typographic Defualts
 $line-height: 1.5;

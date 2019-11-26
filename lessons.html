@@ -1,14 +1,20 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Final Project</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles/styles.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>COMP 1950 - Lessons</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:100,300,400,500,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="styles/styles.css">
+
 </head>
 
-<body>
-
+<body class="pg-lessons">
+<div class="wrapper">
 	<header>
 			<div class="header-row-01">
 					<h1 class="logo"><a href="./index.html"><img src="./images/logo.png" alt="BCIT"></a></h1>
@@ -34,31 +40,87 @@
 						<li class="apply"><a href="#0">HOW TO APPLY</a></li>
 					</ul>
 				</nav>
-			</header>
-			<main>
-				<div class="banner">
-					<div class="slideshow">
-						<img src="./images/home-banner01.png" alt="Computer code">
-						<img src="./images/home-banner02.jpg" alt="Computer on desk">
-						<img src="./images/home-banner03.jpg" alt="BCIT - Burnaby campus">
-					</div>
-					<h1>Web Development<br>and Design2</h1>
-				</div>
-	
 	</header>
 	<main>
-		<div class="lessons-header">
-			<h2>Lessons</h2>
+		<section class="lessons-container">
+			<h1>Lessons</h1>
+			<article class="lesson" id="less1">		
+				<h2 class="title">lesson 1</h2>
+				<h3 class="content">introduction</h3>						
+				<a href="lesson_one.html"><img class="lessons_image" src="./images/lessons_week1.jpg" alt="week1"/></a>
+			</article>
+				
+			</article>
 
-		</div>
-		<div class="lesson-list">
-				<ul>
-						<li><a href="lesson_one.html">Introduction</a></li>
-						<li><a href="lesson_two.html">Fonts</a></li>
-						<li><a href="lesson_three.html">CSS</a></li>
+			<article class="lesson" id="less2">	
+					<h2 class="title">lesson 2</h2>
+					<h3 class="content">fonts</h3>								
+					<a href="lesson_two.html"><img class="lessons_image" src="./images/lessons_week2.jpg" alt="week2"/></a>
 						
-					</ul>
-		</div>
+				</article>
+
+			<article class="lesson" id="less3">	
+					<h2 class="title">lesson 3</h2>
+					<h3 class="content">flexbox</h3>							
+					<a href="lesson_three.html"><img class="lessons_image" src="./images/lessons_week3.jpg" alt="week3"/></a>
+				
+			</article>
+			
+			<article class="lesson" id="less4">
+					<h2 class="title">lesson 4</h2>
+					<h3 class="content">css3</h3>					
+					<a href="#0"><img class="lessons_image" src="./images/lessons_week4.jpg" alt="week4"/></a>
+			</article>
+
+			<article class="lesson" id="less5">
+					<h2 class="title">lesson 5</h2>
+					<h3 class="content">responsive image</h3>					
+					<a href="#0"><img class="lessons_image" src="./images/lessons_week5.jpg" alt="week5"/></a>
+			</article>
+			<article class="lesson" id="less6">
+					<h2 class="title">lesson 6</h2>
+					<h3 class="content">midterm</h3>
+					<a href="#0"><img class="lessons_image" src="./images/lessons_week6.jpg" alt="week6"/></a>
+				</article>
+
+			<article class="lesson" id="less7">
+				<h2 class="title">lesson 7</h2>
+				<h3 class="content">grid layout</h3>					
+				<a href="#0"><img class="lessons_image" src="./images/lessons_week7.jpg" alt="week7"/></a>
+			</article>
+
+			<article class="lesson" id="less8">
+				<h2 class="title">lesson 8</h2>
+				<h3 class="content">sass</h3>						
+				<span class="fade-out"><a href="#0"><img class="lessons_image" src="./images/lessons_week8.jpg" alt="week8"/></a>
+			</article>
+
+			<article class="lesson" id="less9">
+				<h2 class="title">lesson 9</h2>
+				<h3 class="content">version control</h3>							
+				<a href="#0"><img class="lessons_image" src="./images/lessons_week9.jpg" alt="week9"/></a>
+			</article>
+
+			<article class="lesson" id="less10">
+				<h2 class="title">lesson 10</h2>
+				<h3 class="content">PHP/Javascript</h3>						
+				<a href="#0"><img class="lessons_image" src="./images/lessons_week10.jpg" alt="week10"/></a>
+			</article>
+
+			<article class="lesson" id="less11">
+				<h2 class="title">lesson 11</h2>
+				<h3 class="content">open lab</h3>							
+				<a href="#0"><img class="lessons_image" src="./images/lessons_week11.jpg" alt="week11"/></a>
+			</article>
+
+			<article class="lesson" id="less12">
+				<h2 class="title">lesson 12</h2>
+				<h3 class="content">final exam</h3>								
+				<a href="#0"><img class="lessons_image" src="./images/lessons_week12.jpg" alt="week12"/></a>
+			</article>			
+			
+
+		</section>
 		
 	</main>
 	<footer>
@@ -94,7 +156,13 @@
 		</div>
 		<div class="copy"><p>&copy; 2018 COMP 1950</p></div>
 	</footer>
-
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	<script src="./scripts/menu.js"></script> 
+	<script src="./scripts/lessons_fade.js"></script> 
+	</div>   
 </body>
 </html>

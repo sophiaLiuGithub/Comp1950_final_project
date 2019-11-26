@@ -1,0 +1,31 @@
+//animations
+
+//lessons page animation
+//title fade in
+@keyframes titleFadeIn{
+    from {
+        color:$lessons-page-title-dark;        
+        background-color: $lessons-page-title-bgcolor-light; 
+        opacity:0.6;
+    }
+    to {
+        color:$lessons-page-title-light;        
+        background-color:$lessons-page-title-bgcolor-dark;
+        opacity:1.0;
+    }
+  }
+//content fade in
+  @keyframes contentFadeIn{
+    from {
+        color:$lessons-page-content-light;
+        font-size: $lessons-page-content-fonesize-before;
+        text-shadow: none;            
+      }    
+    
+    to {        
+        color:$lessons-page-content-dark;
+        font-size: $lessons-page-content-fonesize-after;        
+        text-shadow: $lessons-page-content-textshadow;
+      }
+    
+  }

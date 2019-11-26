@@ -53,7 +53,7 @@ section.intro-container ul li::before, section.schedule-container ul li::before 
     margin-left: -1em;
 }
 
-//contact page typo setting
+//contact page typo style
 section.contact_form h1{
     font-size: $contact-page-headline-fontsize;
     color: $site-darkblue;   
@@ -91,3 +91,37 @@ section.contact_form #btnReset, #btnSubmit{
         font-size: 1.2em;
     }
 }
+
+//lessons page typo style
+//headline style
+section.lessons-container h1{
+    font-size:3.0em;
+    color: $lessons-headline-text-color;
+    text-transform: capitalize;
+    
+}
+section.lessons-container .title{
+        color:$lessons-page-title-dark;
+        font-size: 1.4em; 
+        background-color: #BBFFEE; 
+        opacity:0.6;
+        display: inline;
+        line-height: 1.2;
+        text-align: left;
+        text-shadow: none;
+        font-family:$lessons-page-title-font;
+}
+section.lessons-container .title:first-letter{
+    text-transform: capitalize;    
+}
+section.lessons-container .content{
+    color:$lessons-page-content-light;
+    font-size: $lessons-page-content-fonesize-before;
+    text-shadow:none;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family: $lessons-page-content-font;
+    
+}
+
+
