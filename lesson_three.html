@@ -1,169 +1,516 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>COMP 1950 - Lessons</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>COMP 1950 - lesson1</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
 <body>
+        <div class="wrapper">
+                
+                <header>
+                        <div class="header-row-01">
+                                    <h1 class="logo"><a href="./index.html"><img src="./images/logo.png" alt="BCIT"></a></h1>
+                                    <h2><span>COMP 1950</span><br>Web Development and Design2</h2>
+                                    <form class="form-search" method="get" action="#" role="search">
+                                            <input type="text" placeholder="Search BCIT" class="input-search">
+                                            <button type="submit" class="btn"></button>
+                                    </form>
+                            <button class="hamburger" id="hamburger">
+                                <span class="hamburger-content">
+                                    <span class="hamburger-icon" tabindex="-1">&#9776;</span>
+                                    <span class="hamburger-text">Menu</span>
+                                </span>
+                            </button>
+                        </div>
+                        <nav id="main-navigation">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+           			<li><a href="outline.html">Outline</a></li>
+           			<li><a href="schedule.html">Schedule</a></li>
+           			<li><a href="lessons.html">Lessons</a></li>
+				<li><a href="contact.html">Contact</a></li>
+                                <li class="apply"><a href="#0">HOW TO APPLY</a></li>
+                            </ul>
+                        </nav>
+                </header>
+				<main>
+				<section class="pg-lesson3">	
+				<div class="lesson-content">
+					<h1>Lesson 3</h1>
+						<section class="lesson3 agenda">
+								<h2>Agenda</h2>
+								<ul>
+									<li>Referencing Stylesheets</li>
+									<li>Importing</li>
+									<li>Fonts</li>
+									<li>Compact CSS</li>
+									<li>Advanced Selectors</li>
+									<li>Rule Specificity</li>
+									<li>To Do</li>
+								</ul>
+						</section>
+						<section class="lesson3 content">										
+								<h2>Referencing CSS</h2>	
+								<article class="less3-content">						
+								<p>When linking to external style sheets, there are a number of features to be aware of:</p>
+								<ul>
+									<li>Each stylesheet requires its own <span>link</span> tag</li>
+									<li>Multiple stylesheets can be loaded (main.css, fonts.css, layout.css, etc)</li>
+									<li><span>rel</span> determines how the HTML will use the file linked to (<span>REQUIRED</span>)</li>
+									<li><span>href</span> defines the path, relative or absolute, to the css file (<span>REQUIRED</span>)</li>
+									<li><span>type</span> attribute has been deprecated (dropped in HTML5)</li>
+									<li><span>title</span> attribute allows the user to group stylesheets</li>
+									<li><span>media</span> attribute allows you to specify what medium this should be viewed in.</li>
+								</ul>
+								<p><span class="code">&lt;link rel="stylesheet"<br />
+									href="http://www.mysite.com/css/styles.css"<br />
+									type="text/css"<br />
+									title="Main Style"<br />
+									media="screen" /></p>
+								</article>
 
-	<header>
-			<div class="header-row-01">
-					<h1 class="logo"><a href="./index.html"><img src="./images/logo.png" alt="BCIT"></a></h1>
-					<h2><span>COMP 1950</span><br>Web Development and Design2</h2>
-					<form class="form-search" method="get" action="#" role="search">
-						<input type="text" placeholder="Search BCIT" class="input-search">
-						<button type="submit" class="btn"></button>
-					</form>
-					<button class="hamburger" id="hamburger">
-						<span class="hamburger-content">
-							<span class="hamburger-icon" tabindex="-1">&#9776;</span>
-							<span class="hamburger-text">Menu</span>
-						</span>
-					</button>
-				</div>
-				<nav id="main-navigation">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-           				<li><a href="outline.html">Outline</a></li>
-           				<li><a href="schedule.html">Schedule</a></li>
-           				<li><a href="lessons.html">Lessons</a></li>
-						<li><a href="contact.html">Contact</a></li>
-						<li class="apply"><a href="#0">HOW TO APPLY</a></li>
-					</ul>
-				</nav>
-			</header>
-			<main>
-				<div class="banner">
-					<div class="slideshow">
-						<img src="./images/home-banner01.png" alt="Computer code">
-						<img src="./images/home-banner02.jpg" alt="Computer on desk">
-						<img src="./images/home-banner03.jpg" alt="BCIT - Burnaby campus">
+								<article class="less3-content">
+								<h3>Media variations: media attribute</h3>
+								<ul>
+									<li><span>media="type"</span> can be a powerful tool</li>
+									<li>Examples of media types:
+										<ul>
+											<li>all - well supported, commonly used (DEFAULT)</li>
+											<li>aural</li>
+											<li>braille</li>
+											<li>embossed</li>
+											<li>handheld - not common (smart phones identify as <span>screen</span>)</li>
+											<li>print - well supported, commonly used</li>
+											<li>projection</li>
+											<li>screen - well supported, commonly used</li>
+											<li>tty</li>
+											<li>tv</li>
+										</ul>
+									</li>
+									<li>Note that most smart phone devices (iPhones, Android, etc) do not identify themselves as media type <span>handheld</span>. The reasoning was that the devices were more than capable of displaying standard web sites, so they identify as <span>screen</span>.</li>
+								</ul>
+								</article>
+
+								<article class="less3-content">
+								<h3>Alternate style sheets: rel attribute</h3>
+								<p>You can also have alternate stylesheets supported</p>
+								<ul>
+									<li><span>rel="stylesheet"</span> defines the default stylesheets to use</li>
+									<li><span>rel="alternate stylesheet"</span> allows different styles to be defined</li>
+									<li><span>Tip: </span> If you have multiple sheets that belong to one "look" make sure they all have the same <span>title</span></li>
+									<li>You can create alternate style sheets for users, allowing them to select which ones they would like to see</li>
+									<li>An example would be to create a 'Larger Text' style sheet with everything in a larger font, or providing an option for users to choose an austere, simple page instead of a colorful/image heavy stylesheet</li>
+									<li>Many browsers are now giving users the ability to select which sheet they would like to see. (Firefox: View > Page Style)</li>
+								</ul>
+								</article>
+
+								<article class="less3-content">
+								<h3>Alternate style sheets: title attribute</h3>
+								<ul>
+									<li>A stylesheet is "persistent" if it is linked with <span>rel="stylesheet"</span> and has no <span>title</span> attribute. All persistent stylesheets are always used when rendering</li>
+									<li>A stylesheet is "preferred" if it is linked with <span>rel="stylesheet"</span> and has a <span>title</span> attribute. these styles will be used as the default. preferred stylesheets with the same title are grouped together</li>
+									<li>Finally, a stylesheet is "alternate" if it is linked with <span>rel="alternate stylesheet"</span> and has a <span>title</span>. These stylesheets are supposed to allow the user to choose stylesheets, they are grouped together by <span>title</span> and show up in the browser's stylesheet selector if it has one (<span>View > Page Style</span> in Firefox). Each group (by <span>title</span>) is mutually exclusive.</li>
+								</ul>
+
+								<section class="type">
+								<h4>Persistent Styles</h4>
+								<p>Persistent styles apply in all cases, even when alternate styles are chosen.</p>
+								<p class="code">&lt;!-- rel="stylesheet" with NO title="" --><br />
+								&lt;link rel="stylesheet"<br />
+								href="css/persistent_styles.css" /></p>
+								</section>
+
+								<section class="type">
+								<h4>Preferred Styles</h4>
+								<p>Preferred styles will be the default, but will be replaced if alternate styles are chosen.</p>
+								<p class="code">&lt;!-- rel="stylesheet" AND a title="" --><br />
+								&lt;link rel="stylesheet"<br />
+									href="css/default_styles.css"<br />
+									title="Standard Styling" /></p>
+								</section>
+
+								<section class="type">
+								<h4>Alternate Styles</h4>
+								<p>Alternate styles will not be applied by default, but may be chosen by the user agent. Each alternate stylesheet must have a <span>title=""</span>.</p>
+								<p class="code">&lt;!-- use rel="alternate stylesheet" for alternative stylesheets... --><br />
+								&lt;link rel="alternate stylesheet"<br />
+									href="css/large_text.css"<br />
+									title="Large Text Styles" /></p>
+								</section>
+
+								<section class="type">
+								<h3>Grouping Stylesheets</h3>
+								<p>If more than one link tag shares the same <span>title=""</span> then they will be grouped together.</p>
+								<p class="code">&lt;!-- group stylesheets with shared title="" --><br />
+								&lt;link rel="alternate stylesheet"<br />
+									href="css/monchrome_layout.css"<br />
+									title="Monochrome Styles"	/><br />
+								&lt;link rel="alternate stylesheet"<br />
+									href="css/monchrome_fonts.css"<br />
+									title="Monochrome Styles" /></p>
+								</section>
+								<p>To enable alternate stylesheet switching, you can either apply some javascript to manage the switch with hyperlinks, or use <a href="https://support.mozilla.org/en-US/questions/841578" target="_blank">Firefox for alternate stylesheets</a>.</p>
+							
+							</article>
+							<article class="less3-content">
+								<h3>@import: Managing Multiple CSS Files</h3>
+								<p>You can use the <span>@import</span> method to import multiple stylesheets from a basic stylesheet that you link to. This will reduce the clutter that can sometimes occur within the <span>&lt;head></span> section.</p>
+								<p>It is also a great place to be able to manage your CSS. From your main document, create a <span>&lt;link></span> to your <span>styles.css</span> page.</p>
+								<p>In the body of the <span>styles.css</span> file, import as many files as you need:</p>
+								<ul>
+									<li><span>@import url("css/type.css");</span></li>
+									<li><span>@import url("css/nav.css");</span></li>
+									<li><span>@import url("css/template.css");</span></li>
+								</ul>
+								<p><span>NOTE: </span> when using the <span>@import</span> directive in an external CSS file, ensure it comes before your CSS selector rules. It might be best to not include any CSS rules in a page that uses <span>@import</span>.</p>
+							</article>
+
+							<article class="less3-content">
+								<h3>@charset: Assigning CSS Character Set</h3>
+								<p>If your CSS files only contain standard keyboard characters, assigning the character set is not required. The CSS language itself does not use any exotic characters, so assigning a charset is often omitted. If, however, your CSS needs to use special characters, ensuring the correct character set can be very important. Eg: When using a pseudoclass to add content to HTML <span>content: "Awesome!"</span></p>
+								<p>If needed, add the <span>@charset</span> rule to the top of the CSS document.</p>
+								<p class="code"><span>/* assign charset at top of .css file */<br />
+								@charset "utf-8";</span></p>
+								<p><span>/* CSS rules follow... */</span></p>
+							</article>
+
+							<article class="less3-content">
+								<h3>@font-face And Font Servers</h3>
+								<p>Fonts that aren't available on the client machine can be provided by a third-party font server or by your website's server.</p>
+								<ul>
+									<li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a></li>
+									<li><a href="https://typekit.com/" target="_blank">Adobe Typekit</a></li>
+									<li><a href="https://www.fontsquirrel.com/" target="_blank">•	Font Squirrel</a></li>
+									<li>Plenty more available online...</li>
+								</ul>
+							</article>
+
+							<article class="less3-content">
+								<h3>Third Party Font Server</h3>
+								<p>Browse the font server site, select the fonts you like and they will provide you with code for a <span>&lt;link /></span> tag to add to your HTML. You can then use the font in your CSS.</p>
+								<p>&lt;!-- add the link tag to the HTML --><br />
+								&lt;link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet" /></span></p>
+								<p class="code"><span>/* use the font in the CSS */<br />
+								selector{<br />
+									<span>font-family: 'Bungee', cursive;</span><br />
+								}</p>
+								<p>No longer stuck with 'Arial', 'Helvetica', 'Georgia' and the rest.</p>
+							</article>
+
+							<article class="less3-content">
+								<h3>Serve Fonts From Your Website</h3>
+								<p>If the font(s) are copyright free, or if you have license to distribute a font, you can serve them yourself using the CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face" target="_blank">@font-face</a> directive.</p>
+								<p>Different client systems will need fonts in varying formats, so if you are distributing the font yourself, be sure to have the font available in most common formats.</p>
+								<ul>
+									<li>Obtain the font(s) you wish to use. You must either have license to distribute the font or the font must be copyright free.</li>
+									<li>Upload your font(s) to a <a href="https://www.fontsquirrel.com/tools/webfont-generator" target="_blank">Font Generator</a> to obtain a font kit including various formats for the font(s).</li>
+									<li>Uncompress the font kit and locate it somewhere with your website files.</li>
+									<li>Use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face" target="_blank">@font-face</a> to load the fonts. The font-kit generated by Squirrel Font will include some same CSS to help you with the sometimes volumous coding.</li>
+									<li>Apply the new font in CSS.</li>
+								</ul>
+								<p class="code">/* load the font in CSS */<br />
+								@font-face {<br />
+									font-family: 'alex_brushregular';<br />
+									src: url('/fonts/alexbrush-regular-webfont.woff2') format('woff2'),<br />
+									url('/fonts/alexbrush-regular-webfont.woff') format('woff'),<br />
+									url('/fonts/alexbrush-regular-webfont.ttf') format('tff');<br />
+								}</p>
+								<p class="code">/* use the font in CSS */<br />
+								selector{<br />
+									font: bold 20px alex_brushregular ;<br />
+									color:#555;<br />
+								}</p>
+								<p>Don't get carried away with wild font choices. Some fonts have very poor readability, reducing accessibility.</p>
+							</article>
+
+							<article class="less3-content">
+								<h3>CSS Measurements</h3>
+								<p>In CSS, there are a number of measurement values that can be used in declarations.</p>
+								
+								<h3>Size measurements</h3>
+								<ul>
+									<li><span>px</span> - Pixels is one of the most common measuring types. It is specific to computers, as it renders based on the pixel-display of all monitors. Great for specific measurements on boxes and borders, but for fonts, it can lead to difficulty as some browsers don't allow scaling and font can end up too small.</li>
+									<li><span>%</span> - Percentage measurements are also very common.</li>
+									<li><span>em</span> - A relative measurement of the letter "m" in the chosen font. This is a popular one for spacing around text, as it inherits the font dimensions.</li>
+									<li><span>rem</span> - Similar to <span>em</span>, this will inherit only the Root value, helpful for avoiding 'compound inheritance' values.</li>
+									<li><span>pt</span> - Points is an old system related to type-setting that had a standard size for points. This is a relative size based on the users' system.</li>
+									<li><span>pc</span> - Picas is a very old system that was frequently related to typewritten documents. Rarely used.</li>
+									<li><span>ex</span> - Similar to <span>em</span>, this is a relative measurement of the letter "x". However, it is rarely used, and not fully supported.</li>
+									<li><span>vh, vw, vmin, vmax</span> - size relative to viewport widths and heights. very useful for scaling, though may not enjoy full support yet.</li>
+									<li><span>named</span> - This refers to fonts and a few other elements. The named sizes are xx-small, x-small, small, medium, large, x-large, xx-large. They are relative to the browsers base font size.</li>
+								</ul>
+							</article>	
+							<article class="less3-content">
+								<h3>Color Measurement</h3>
+								<p>Colors can be specified in a number of ways, corresponding to the system that your organization or visual element requires. Almost all color systems use a method for expressing a combination of the three-color spaces used for displaying colors on computer monitors: Red Green and Blue.</p>
+								<ul>
+									<li><span>Hex: #003366</span> - One of the most common systems, it combines 2 digits each for Red Green and Blue. Each hex pair stand stands for digits between 00 and FF in hexadecimal.</li>
+									<li><span>Compact Hex: #f30</span> - This is almost identical to the Hex version, except that when three numbers are used, most browsers will just double-up each digit. So, <span>#f30</span> will become <span>#ff3300</span>.</li>
+									<li><span>Named: cornflowerblue</span> - Although the official W3C specification only lists 16 named colors, almost every browser supports the various <a href="http://www.google.ca/search?q=css+named+colors" target="_blank">named colors</a>.</li>
+									<li><span>RGB: rgb(255, 0, 255) </span> - This allows the user to specify the same thing as Hex, but in Decimal format.</li>
+									<li><span>RGB %: rgb(100%, 0%, 50%)</span> - Almost identical to RGB, but with percentages of each color space instead.</li>
+								</ul>
+							</article>
+
+							<article class="less3-content">						
+								<h2>Compact CSS Code</h2>
+								<p>When building your CSS rules, there are some easy ways to compact your code, reducing code bloat and file size.</p>
+								
+								<h3>Grouping selectors</h3>
+								<ul>
+										<li>If you would like to apply the same style to a multitude of different selectors, you can group them with the comma</li>
+										<li><span>h1, h2, h3, h4, h5 { color: red; }</span></li>
+										<li>This can be done with Elements, classes and IDs</li>
+										<li>Specific rules for H3 (for example) can come later</li>
+								</ul>
+
+								<h4>Grouping comes to Classes</h4>
+								<ul>
+									<li>As well as grouping Elements, you can also group classes</li>
+									<li>Define several classes: <span>.cool{ color:red; } .wicked { border:1px solid black; }</span></li>
+									<li>Assign several classes at once: <span>&lt;p class="cool wicked"></span> will select both the <span>cool</span> and <span>wicked</span> classes</li>
+									<li>The order of the attribute values is irrelevant</li>
+									<li>Case is important! Remember to use a single rule for CSS naming and stick with it</li>
+								</ul>
+
+								<h3>Rule Compacting</h3>
+								<p>There are a lot of rules that will accept a compacted ruleset:</p>
+								<ul>
+										<li><a href="https://developer.mozilla.org/en/docs/Web/CSS/margin" target="_blank">margin</a>: top right bottom left;</li>
+										<li><a href="https://developer.mozilla.org/en/docs/Web/CSS/padding" target="_blank">padding</a>: top right bottom left;</li>
+										<li><a href="https://developer.mozilla.org/en/docs/Web/CSS/border" target="_blank">border</a>: width style color;</li>
+										<li><a href="https://developer.mozilla.org/en/docs/Web/CSS/font" target="_blank">font</a>: font-style font-variant font-weight font-size/line-height font-family;</li>
+										<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background" target="_blank">background</a>: color image position repeat size attachment;</li>
+								</ul>								
+								<p>Box model properties support 1, 2, 3 and 4 values. For example:</p>
+								<ul>
+									<li><span>border-width:10px;</span>
+										<ul>
+											<li>all four borders are 10px</li>
+										</ul>
+									</li>
+									<li><span>border-width:10px 20px;</span>
+										<ul>
+											<li>top and bottom borders are 10px</li>
+											<li>left and right borders are 20px</li>
+										</ul>
+									</li>
+									<li><span>border-width:10px 20px 30px;</span>
+										<ul>
+											<li>top border is 10px</li>
+											<li>left and right borders are 20px</li>
+											<li>bottom border is 30px</li>
+										</ul>
+									</li>
+									<li><span>border-width:10px 20px 30px 40px;</span>
+										<ul>
+											<li>top border is 10px</li>
+											<li>right border is 20px</li>
+											<li>bottom border is 30px</li>
+											<li>left border is 40px</li>
+										</ul>
+									</li>
+								</ul>
+								<p>Note you do not need to specify values for all fields in a compact rule. Just keep the space delimited list in the correct order. For example, you could specify several font values all at once:<br />
+								<span>font: italic small-caps bold 1.3em "helvetica", sans-serif;</span></p>
+								<p>or, specify only a select couple.<br />
+								<span>font: 1.3em "helvetica", sans-serif;</span></p>
+							</article>
+
+							<article class="less3-content">
+								<h2>CSS Selectors</h2>
+								<p>There are several <a href="http://css.maxdesign.com.au/selectutorial/" target="_blank">advanced CSS selector techniques</a> that provide plenty of options for the application of style.</p>
+								<h3>Universal Selector</h3>
+								<ul>
+									<li>This is a fairly widely supported selector: the asterisk <span>*</span>.</li>
+									<li>Use it to specify a global rule.</li>
+									<li><span>* { color: red; }</span> will make all font color red on your page.</li>
+									<li>The universal selector can be very powerful, as it can command a lot of changes to your styles.</li>
+								</ul>
+
+								<h3>Pseudo-classes</h3>
+								<p>A Pseudo-class is a selector that allows you to reference a specific action or attribute of an element. This is most often used when specifying <span>a</span> attributes, such as <span>:visited</span> and <span>:link</span>.</p>
+								<p>There are other uses for pseudo elements, that will allow for greater detail in styling content, such as <span>:first-letter</span> and <span>:first-line</span>. These allow the browser to apply a style based on an unselected, but displayed element.</p>
+								<p><em>Best part</em>: No <span>span</span> or <span>div</span> required to access these pseudo-elements.</p>
+								<ul>
+									<li>Within <span>a</span> pseudo-elements in particular, it's important to follow a certain order:
+										<ul>
+											<li><span>a:link</span></li>
+											<li><span>a:visited</span></li>
+											<li><span>a:hover</span></li>
+											<li><span>a:active</span></li>
+										</ul>
+									</li>
+								</ul>
+								<p>Easy mnemonic: LVHA - <span>L</span>o<span>V</span>e - <span>HA</span>te. Because of the way that CSS applies rules, it looks at the LAST rule for a given element and applies more weight to it. For example, if you are hovering over a link, you don't want to see the link state</p>
+								<ul>
+									<li>There are several additional <a href="http://css.maxdesign.com.au/selectutorial/selectors_pseudo_class.htm" target="_blank">pseudo-classes</a> and <a href="http://css.maxdesign.com.au/selectutorial/selectors_pseudo_element.htm" target="_blank">pseudo-elements</a>
+										<ul>
+											<li><span>selector:before, selector:after</span> - add text content before or after the selector's content</li>
+											<li><span>selector:first-line, selector:first-letter</span> - style the first line or letter of the selector</li>
+											<li><span>selector:first-of-type, selector:last-of-type</span> - style the first or last tag of the selector type</li>
+											<li><span>selector:nth-of-type(n)</span> - select the nth() tag of the same type as selector</li>
+											<li><span>selector:nth-child(n)</span> - select the nth() child</li>
+											<li><span>selector:nth-child(2n)</span> - select every even numbered child</li>
+											<li><span>selector:nth-child(2n+1)</span> - select every odd numbered child</li>
+										</ul>
+									</li>
+								</ul>
+
+								<h3>Descendant Selectors</h3>
+								<ul>
+									<li>Separated by a space, the last element is the one being styled</li>
+									<li><span>h1 em</span> will apply rules to all em's within an h1</li>
+									<li>You can have as many as you want: <span>ul ol ul li</span></li>
+									<li>Great for specifying different styles when they apply only in certain areas</li>
+									<li><span>#nav a { ... }</span> will only apply these rules to Anchors within the div called nav</li>
+									<li>Degree of separation can be infinite, so be careful</li>
+									<li><span>p em</span> will match ANY em that descends from a paragraph, no matter how nested</li>
+								</ul>
+
+								<h3>Child Selectors</h3>
+								<ul>
+									<li>Uses the > combinator to specify children</li>
+									<li>Will select an element that is directly descended from another element</li>
+									<li><span>p > span</span> will only select a span tag that is inside a paragraph</li>
+									<li>Will not select a span tag embedded in any other tag (even if it is within a paragraph)</li>
+								</ul>
+
+								<h3>Adjacent Sibling Selectors</h3>
+								<ul>
+									<li>The + combinator specifies the first sibling tag following the root</li>
+									<li>It will not include the root for styling</li>
+									<li><span>div + h2</span> will select the first sibling h2 following a div tag</li>
+								</ul>
+
+								<h3>General Sibling Selectors</h3>
+								<ul>
+									<li>The ~ combinator specifies all siblings tags following the root</li>
+									<li>It will not select sibling tags that precede the root, nor will it include the root</li>
+									<li><span>h1 ~ h2</span> will select all sibling h2 tags that follow an h1</li>
+								</ul>
+
+								<h3>Attribute Selectors</h3>
+								<ul>
+									<li>You can also select elements by what the element contains</li>
+									<li>The method is: <span>element[attribute=value]</span></li>
+									<li>If you specify an attribute with no value, you will match any element that simply has the attribute present (no matter what it's value is)</li>
+									<li><span>p[align] {color: red;}</span> will turn red any paragraph that contains an align attribute</li>
+									<li>Similarly, <span>img[alt] {border: 1pt red solid; }</span> will draw a red line around all images with an alt attribute</li>
+									<li>You can further direct the attribute selector to find content that is at the beginning (using the carat: ^), somewhere inside (using the asterisk: *) or end of a value (using the dollar sign: $)</li>
+									<li>Attribute selector examples:
+										<ul>
+											<li><span>img[alt]</span> - select all img tags that have alt attributes</li>
+											<li><span>img[src="images/pic.jpg"]</span> - select img tags whose src is 'images/pic.jpg'</li>
+											<li><span>img[src^="gallery/"]</span> - select all img tags whose src BEGINS with 'gallery/'</li>
+											<li><span>img[src*="logo"]</span> - select all img tags whose src CONTAINS 'logo'</li>
+											<li><span>img[src$=".png"]</span> - select all img tags whose src ENDS with '.png'</li>
+										</ul>
+									</li>
+								</ul>
+							</article>
+
+							<article class="less3-content">
+								<h2>Rule Order &amp; Specificity</h2>
+								<p>When a style declaration is found to be in conflict with a previously declared style, there is a method for determining which one will win out. The process is built into every web browser, and almost all of them calculate the values identically (for once!).</p>
+								<p>Here is how the W3C defines the process by which style order is determined:</p>
+								<ul>
+									<li><span>Discover all declarations</span>. Find all declarations that apply to the element and property in question, for the target media type. Declarations apply if the associated selector matches the element in question.</li>
+									<li><span>Sheet Order</span>. The primary sort of the declarations is by weight and origin: for normal declarations, author style sheets override user style sheets which override the default style sheet.
+										<ul>
+											<li><em>Note:</em> For "!important" declarations, user style sheets override author style sheets which override the default style sheet. "!important" declaration override normal declarations. An imported style sheet has the same origin as the style sheet that imported it.</li>
+										</ul>
+									</li>
+									<li><span>Specificity</span>: The secondary sort is by specificity of selector: more specific selectors will override more general ones. Pseudo-elements and pseudo-classes are counted as normal elements and classes, respectively.</li>
+									<li><span>Sort by Order</span>: Finally, sort by order specified: if two rules have the same weight, origin and specificity, the latter specified wins. Rules in imported style sheets are considered to be before any rules in the style sheet itself.</li>
+								</ul>
+								<p>All of the rules are pretty straightforward, except for Specificity, which bears some explanation.</p>
+								<p><span>Specificity</span> is a method for determining what rules are applied when a conflict between two selectors occurs. Through a method of adding values when certain elements and selectors are present, a specificity number can be applied to any CSS rule. The one with highest specificity wins and the associated rule is applied to the element(s) in question.</p>
+								
+								<h3>Ruleset for Specificity</h3>
+								<p>Style sheets can also override conflicting style sheets based on their level of specificity, where a more specific style will always win out over a less specific one. It is simply a counting game to calculate the specificity of a selector.</p>
+								<ol>
+									<li>Count the number of IDs in the selector.</li>
+									<li>Count the number of CLASS, pseudoclass, and attribute selectors.</li>
+									<li>Count the number of HTML tag names in the selector.</li>
+								</ol>								
+								<p>Next, write the three numbers in exact order with no spaces or commas to obtain a three-digit number. (Note, you may need to convert the numbers to a larger base to end up with three digits.) The final list of numbers corresponding to selectors will easily determine specificity with the higher numbers winning out over lower numbers. Following is a list of selectors sorted by specificity:</p>
+								<ul>
+									<li>#id1<br />/* <span>id</span>=1 <span>class</span>=0 <span>HTML</span>=0 --> specificity = 100 */</li>
+									<li>UL UL LI.red<br />/* <span>id</span>=0 <span>class</span>=1 <span>HTML</span>=3 --> specificity = 013 */</li>
+									<li>LI.red<br />/* <span>id</span>=0 <span>class</span>=1 <span>HTML</span>=1 --> specificity = 011 */</li>
+									<li>LI<br />/* <span>id</span>=0 <span>class</span>=0 <span>HTML</span>=1 --> specificity = 001 */</li>
+								</ul>
+								
+								<h3>!important rule</h3>
+								<ul>
+									<li>This declaration, when added to a rule, will override almost all other declarations, with no respect for specificity.</li>
+									<li>It indicates that this rule should take over any previous rules that might govern a specific element.</li>
+									<li>Example <span>.selector{ color:blue !important; }</span></li>
+									<li>This rule can cause havoc if overused, as it will overrule any other declaration with the same selector. <span>Be careful with !important</span></li>
+								</ul>
+
+							</article>
+						</section>
+						<section class="lesson3 lab">
+								<h2>To Do</h2>
+								<ul>
+									<li>Download, review, and complete the homework assignment from <a href="https://learn.bcit.ca/" target="_blank">D2L</a></li>
+									<li>Find a partner for your homework.</li>
+									<li>Practice using <a href="http://bcitcomp.ca/1950/lecture/03/#advanced_selectors" target="_blank">advanced CSS selectors</a>.</li>
+								</ul>
+							</section>
+						</div>       
 					</div>
-					<h1>Web Development<br>and Design2</h1>
-				</div>
-	
-	</header>
-	<main>
-		<div class="lessons-css">
-			<h2><b>Agenda</b></h2>
-			<ul>
-				<li><b>Referencing Style Sheets</b></li>
-				<li><b>Importing</b></li>
-				<li><b>Advanced Selectors</b></li>
-				</ul>
-				<h3>Referencing CSS</h3>
-				<p>When linking to external style sheets, there are a number of features to be aware of:</p>
-				<ul>
-					<li>Each stylesheet requires it's own <i>link</i> tag</li>
-					<li>Multiple stylesheets can be loaded (main.css, fonts.css, layout.css, etc)</li>
-					<li><i>rel</i> determines how the HTML will use the file linked to (REQUIRED)</li>
-					<li><i>href</i> defines the path, relative or absolute, to the css file (REQUIRED)</li>
-					<li><i>type</i> attribute is has been deprecated (dropped in HTML5)</li>
-					<li><i>title</i> attribute allows the user to group stylesheets</li>
-				</ul>
-				<h3>@Import:Managing Multiple Style Sheets</h3>
-				<p>You can use the <i>@import method</i> to import multiple stylesheets from a basic stylesheet that you link to. This will reduce the clutter that can sometimes occur within the <i>head</i> section.</p>
-				<p>It is also a great place to be able to manage your CSS. From your main document, create a <i>link</i> to your styles.css page.</p>
-				<p>In the body of the styles.css file, import as many files as you need:</p>
-				<ul>
-					<li>@import url("css/type.css");</li>
-					<li>@import url("css/nav.css");</li>
-					<li>@import url("css/template.css");</li>
-				</ul>
-				<h3>Universal Selector</h3>
-				<ul>
-					<li>This is a fairly widely supported selector: the asterisk *</li>
-					<li>Use it to specify a global rule</li>
-					<li><i>* { color: green; }</i> will make all font color green on your page</li>
-					<li>The universal selector can be very powerful, as it can command a lot of changes to your styles</li>
-
-				</ul>
-				<h3>Child Selectors</h3>
-				<ul>
-					<li>ses the > combinator to specify children</li>
-					<li>Will select an element that is directly descended from another element</li>
-					<li><i>p > strong</i> will only select a strong tag that is inside a paragraph</li>
-					<li>Will not select a strong tag embedded in any other tag (even if it is within a paragraph)</li>
-				</ul>
-				<h3>Adjacent Sibling Selectors</h3>
-				<ul>
-					<li>The + combinator specifies the first sibling tag following the root</li>
-					<li>It will not include the root for styling</li>
-					<li><i>div + h2</i> will select the first sibling h2 following a div tag</li>
-				</ul>
-				<h3>General Sibling Selectors</h3>
-				<ul>
-					<li>The ~ combinator specifies all siblings tags following the root</li>
-					<li>It will not select sibling tags that precede the root, nor will it include the root</li>
-					<li><i>h1 ~ h2</i> will select all sibling h2 tags that follow an h1</li>
-				</ul>
-				<h3>Attribute Selectors</h3>
-				<ul>
-					<li>you can also select elements by what the element contains</li>
-					<li>The method is: <i>element[attribute=value]</i> </li>
-					<li>If you specify an attribute with no value, you will match any element that simply has the attribute present (no matter what it's value is)</li>
-					<li>You can further direct the attribute selector to find content that is at the beginning (using the carat: ^), somewhere inside (using the asterisk: *) or end of a value (using the dollar sign: $)</li>
-				</ul>
-
-
-
-
-
-
-
-			
-		</div>
-		
-	</main>
+				</section>
+			</main>
+        
 	<footer>
-			<div class="social-content">
-					<h2>Connect with BCIT</h2>
-					<div class="social-icons">
-						<a href="#0" target="_blank" title="Facebook icon"><i class="fab fa-facebook-square" style="font-size:36px;;color:white;"></i></a>&nbsp;
-						<a href="#0" target="_blank" title="Twitter icon"><i class="fab fa-instagram" style="font-size:36px;;color:white;"></i></a>&nbsp;
-						<a href="#0" target="_blank" title="Instagram icon"><i class="fab fa-twitter-square" style="font-size:36px;;color:white;"></i></a>&nbsp;
-						<a href="#0" target="_blank" title="Snapchat icon"><i class="fab fa-snapchat-square" style="font-size:36px;;color:white;"></i></a>&nbsp;
-						<a href="#0" target="_blank" title="YouTube icon"><i class="fab fa-youtube-square" style="font-size:36px;;color:white;"></i></a>&nbsp;
-					</div>
-				</div>
-				<div class="info-content">
-					<h1 class="logo-footer"><a href="./index.html"><img src="./images/logo.jpg" alt="BCIT"></a></h1>
-					<nav class="compuses">
-						<ul>
-							<li><p class="sub-title">CAMPUSES</p></li>
-							<li><a href="#0">Burnaby</a></li>
-							<li><a href="#0">Downtown</a></li>
-							<li><a href="#0">Marine</a></li>
-							<li><a href="#0">Aerospace</a></li>
-							<li><a href="#0">Annacis Island</a></li>
-						</ul>
-					</nav>
-					<div class="findus">
-						<p class="sub-title">FIND US</p>
-						<h2>British Columbia Institute of Technology</h2>
-						<address> Willingdon Avenue<br>Burnaby, British Columbia<br>Canada,  V5G 3H2</address>
-						<p>Telephone: 604-434-5734</p>
-						<p>Toll-free (Can/US): 1-866-434-1610</p>
-					</div>
-				</div>
-				<div class="copy"><p>&copy; 2018 COMP 1950</p></div>
-			
-			</div>	
-		
-	</footer>
-
-	<script src= "./scripts/script.js"></script>
-	<script
+                <div class="social-content">
+                        <h2>Connect with BCIT</h2>
+                        <div class="social-icons">
+                                <a href="#0" target="_blank" title="Facebook icon"><i class="fab fa-facebook-square" style="font-size:36px;;color:white;"></i></a>&nbsp;
+                                <a href="#0" target="_blank" title="Twitter icon"><i class="fab fa-instagram" style="font-size:36px;;color:white;"></i></a>&nbsp;
+                                <a href="#0" target="_blank" title="Instagram icon"><i class="fab fa-twitter-square" style="font-size:36px;;color:white;"></i></a>&nbsp;
+                                <a href="#0" target="_blank" title="Snapchat icon"><i class="fab fa-snapchat-square" style="font-size:36px;;color:white;"></i></a>&nbsp;
+                                <a href="#0" target="_blank" title="YouTube icon"><i class="fab fa-youtube-square" style="font-size:36px;;color:white;"></i></a>&nbsp;
+                        </div>
+                </div>
+            <div class="info-content">
+                        <h1 class="logo-footer"><a href="./index.html"><img src="./images/logo.jpg" alt="BCIT"></a></h1>
+                        <nav class="compuses">
+                                <ul>
+                        <li><p class="sub-title">CAMPUSES</p></li>
+                                        <li><a href="#0">Burnaby</a></li>
+                                        <li><a href="#0">Downtown</a></li>
+                                        <li><a href="#0">Marine</a></li>
+                                        <li><a href="#0">Aerospace</a></li>
+                                        <li><a href="#0">Annacis Island</a></li>
+                                </ul>
+                        </nav>
+                        <div class="findus">
+                                <p class="sub-title">FIND US</p>
+                                <h2>British Columbia Institute of Technology</h2>
+                                <address> Willingdon Avenue<br>Burnaby, British Columbia<br>Canada,  V5G 3H2</address>
+                                <p>Telephone: 604-434-5734</p>
+                                <p>Toll-free (Can/US): 1-866-434-1610</p>
+                        </div>
+                </div>
+            <div class="copy"><p>&copy; 2018 COMP 1950</p></div>
+        </footer>
+        </div>   
+    <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-<script src="./scripts/slideshow.js"></script>
-<script src="./scripts/menu.js"></script>
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="./scripts/menu.js"></script>
+    <script src= "./scripts/form_validation.js"></script>
+   
 </body>
 </html>
