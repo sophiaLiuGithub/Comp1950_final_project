@@ -97,6 +97,7 @@
 								<li>Click: Connect</li>
 								<li>If you experience connectivity problems, re-check your input, or ask your instructor for assistance.</li>
 							</ol>
+							<p><img src="./images/filezilla_screenshot.png" alt="filezilla"></p>
 							<h3>Tools: Visual Studio Code</h3>
 							<p>There are several development tools to choose from. In COMP 1950 we will use the open source Integrated Devlopment Environment (IDE) from Microsoft called Visual Studio Code (VS Code). This is more than a simple text editor, it provides robust code editing, maintenance and testing features, as well as supporting plugins to further increase it's capabilities.</p>
 							<h3>Lab Computers</h3>
@@ -260,6 +261,137 @@
 								<li>Portability (writing code that works well in any computing environment/operating system)</li>
 								<li>Accessibility (produce web pages that are optimized for search engines, screen readers, etc)</li>
 							</ol>
+
+							<h3>Requirements</h3>
+							<ul>
+								<li>HTML + CSS + DOM = Agile Web Sites</li>
+								<li>Structurally valid HTML code (eg: tags that open are closed. parent-child tag relationships are valid, etc)</li>
+								<li>Logically valid HTML code (eg: ids are not applied more than once per page)</li>
+								<li>Syntactically valid CSS code</li>
+								<li>Use external CSS to develop sites that separate content (HTML) from presentation (CSS)</li>
+								<li>Using Semantic Markup to establish content relationships and logical deployment of content</li>
+								<li>Use a single codebase (no browser sniffing, forked code)</li>
+								<li>Consider special needs users with screen readers. A common browser used with screen reader software is&nbsp;<a href="http://www.webbie.org.uk/"><strong>Webbie</strong></a></li>
+							</ul>
+							<h3>Standards: File and Folder Naming</h3>
+							<p>HTTP urls cannot contain certain characters, and certain characters will cause unwanted effects and behaviours when used in a url. Follow best practices for all file and folder names:</p>
+							<ul>
+								<li>File and folder names should&nbsp;<strong>NOT</strong>&nbsp;contain:</li>
+								<ul>
+									<li>Capital letters</li>
+									<li>Spaces</li>
+									<li>Special characters:&nbsp;<strong>! @ # $ % ^ &amp; * ( ) + { } [ ] : ; " &lt; &gt; ? |</strong>&nbsp;etc...</li>
+								</ul>
+								<li>Acceptable non-alphanumeric characters:&nbsp;<strong>. _ - ~</strong></li>
+								<li>Filenames should either be descriptive of the file contents, or use the default page name:&nbsp;<strong>index.htm</strong>,&nbsp;<strong>index.html</strong>&nbsp;or&nbsp;<strong>index.shtml</strong>&nbsp;(or whatever your server default is)</li>
+								<li>Folder names should always be descriptive. Folder structure should be logical (eg:&nbsp;<strong>/hockey/nhl/canucks</strong>).</li>
+							</ul>
+							<h3>Standards: File Management</h3>
+							<ul>
+								<li>Including an&nbsp;<strong>index.html</strong>&nbsp;file in every folder on your server will ensure users cannot go snooping around your filesystem. the index.html file can be a blank HTML page if you like, as long as the user does not see a list of files when they request a folder</li>
+								<li>Browser caching can reduce excessive request/response transactions between client and server. however, some browsers may cache things like the CSS, so if the styles have changed since caching the client may not get the latest styles.</li>
+								<ul>
+									<li><strong>Ctrl + F5</strong>&nbsp;(<strong>Cmd + F5</strong>&nbsp;for Mac) will force a page reload. Very useful when developing on a localhost http server.</li>
+									<li>If a file name has changed, the browser will have to make a new request from the server. versioning your file names will ensure users always have the latest version of any file (for example&nbsp;<strong>styles_1.0.css, styles_1.1.css, styles_1.2.css, styles_2.0.css</strong>&nbsp;etc)</li>
+								</ul>
+								<li>If there are files/pages on your server no longer being used, be sure to either remove them or locate them in a place where users are not going to accidentally find them</li>
+							</ul>
+							<h3>Standards: Code Style and Organization</h3>
+							<p>In COMP1950 students are expected to present a readable, well organized code style:</p>
+							<ul>
+								<li>Comment&nbsp;<strong>all code</strong>&nbsp;with your name (or nickname if you prefer). Do this for all text
+									based files (<strong>.html</strong>,&nbsp;<strong>.css</strong>,&nbsp;<strong>.js</strong>,&nbsp;<strong>.php</strong>, etc)
+									<div class="center">
+										<img src="./images/html1.jpg" alt="html">
+										<img src="./images/css_commenting.png" alt="css commenting">
+									</div>
+								</li>
+								<li>In HTML, use carriage return and tabs to indicate parent-child tag relationships. Likewise, code your CSS to
+									make it easy to see which rules are applied to each selector.
+									<div class="center">
+										<img src="./images/html2.jpg" alt="html">
+									</div>
+								</li>
+								<li>Separate different file types into folders. At minimum, keep all non-html files in their own folder.
+									If you like you can make a dedicated 'html' folder for your&nbsp;<strong>.html</strong>&nbsp;files as well.
+									<div class="center">
+										<img src="./images/folder_structure.png"  alt="folder">
+									</div>
+								</li>
+								<li>Use the&nbsp;<strong>.html</strong>&nbsp;extension for all HTML files (not&nbsp;<strong>.htm</strong>). Use the typical extension for all other text based files.</li>
+								<li>Write structurally valid HTML code:&nbsp;<a href="http://validator.w3.org/"><strong>W3C HTML validator</strong></a></li>
+								<li>Write syntactically valid CSS code:&nbsp;<a href="http://jigsaw.w3.org/css-validator/"><strong>W3C CSS validator</strong></a></li>
+								<li>Include a&nbsp;<a href="http://validator.w3.org/check?uri=referer"><strong>referer link</strong></a>&nbsp;on all your HTML pages:&nbsp;<br> <strong>&lt;a href="http://validator.w3.org/check?uri=referer"&gt;validate&lt;/a&gt;</strong></li>
+							</ul>
+							<h3>Semantic Markup</h3>
+							<p>Highly&nbsp;<a href="https://html.com/semantic-markup/"><strong>semantic HTML content</strong></a>&nbsp;is crucial for usability, accessibilty and search engine optimization.</p>
+							<h3>What is Semantic Markup?</h3>
+							<ul>
+								<li>The practice of organizing your content into a structured hierarchy</li>
+								<li>Using appropriate tags to explain and describe the content</li>
+								<li>H1 ... 6 tags for summary headings</li>
+								<li>UL tags for unsorted, unranked, related points</li>
+								<li>OL tags for sorted, ranked, related points</li>
+								<li>Paragraph tags instead of double BR tags</li>
+								<li>HTML tables used for semantic value (tabular data), not for layouts</li>
+								<li><strong>IMPORTANT</strong>: Separate Content (HTML) from Presentation (CSS)</li>
+							</ul>
+							<h3>Building Content Relationships</h3>
+							<ul>
+								<li>Use appropriate tags for headings, content, sub-content, lists</li>
+								<li>This builds a relationship that descends from the title of the page</li>
+								<li>Each section is a discrete piece of information</li>
+								<li>Headings summarize the following content</li>
+								<li>Citations, quotes, code samples can be contextualized by nearest heading</li>
+							</ul>
+							<h3>Logical vs. Physical Styles</h3>
+							<ul>
+								<li>Tend to display identically in browsers, but are fundamentally different</li>
+								<li>Physical styles define what content&nbsp;<em>looks like</em></li>
+								<li>Logical styles define what content&nbsp;<em>is</em></li>
+								<li>Logical styles are important for screen readers, physical styles are not</li>
+								<li>Given a choice, logical styles are usually preferred</li>
+								<li>Some physical styles:</li>
+								<ul>
+									<li><strong>b</strong>&nbsp;- Bold</li>
+									<li><strong>i</strong>&nbsp;- Italic</li>
+									<li><strong>s</strong>&nbsp;- Strikethrough</li>
+									<li><strong>u</strong>&nbsp;- Underline</li>
+								</ul>
+							</ul>
+							<h3>Logical Styling</h3>
+							<ul>
+								<li>Best way to markup content for long-term usage</li>
+								<li>Use CSS to change style (and some behaviour)</li>
+								<li>Use DOM to change behaviour (via scripting)</li>
+								<li>Requires thinking ahead</li>
+								<li>Examples of logical styles:</li>
+								<ul>
+									<li><strong>strong</strong>&nbsp;-&nbsp;<strong>Increase importance</strong></li>
+									<li><strong>em</strong>&nbsp;-&nbsp;<em>Add Emphasis</em></li>
+									<li><strong>code</strong>&nbsp;-&nbsp;<strong>Code sample</strong></li>
+									<li><strong>kbd</strong>&nbsp;-&nbsp;Keyboard entry</li>
+									<li><strong>samp</strong>&nbsp;-&nbsp;Programming sample</li>
+									<li><strong>var</strong>&nbsp;-&nbsp;<em>Variable</em></li>
+									<li><strong>cite</strong>&nbsp;-&nbsp;<em>Citation</em></li>
+									<li><strong>dfn</strong>&nbsp;-&nbsp;<em>Definition</em></li>
+									<li><strong>abbr</strong>&nbsp;-&nbsp;Abbreviation</li>
+									<li><strong>acronym</strong>&nbsp;-&nbsp;Acronym</li>
+									<li><strong>del</strong>&nbsp;-&nbsp;</li>
+									<li><strong>ins</strong>&nbsp;-&nbsp;Inserted text</li>
+								</ul>
+							</ul>
+							<h3>Key Advantages Of Semantic Content</h3>
+							<ul>
+								<li>Content is relational - context can be determined easily</li>
+								<li>Extracting important pieces of information is simple (CITE or CODE tags for example)</li>
+								<li>Search engine optimization (SEO)</li>
+								<li>Syndication</li>
+								<li>Big win for frameworks such as jQuery</li>
+								<li>Screen reader friendly</li>
+								<li>Increased Accessibility</li>
+								<li>Separating style (CSS) from structure (HTML), makes it easier to maintain</li>
+							</ul>
 							<h3>To Do</h3>
 							<ul>
 								<li>Download, review, and complete the homework assignment from&nbsp;<a href="https://learn.bcit.ca/"><strong>D2L</strong></a></li>
