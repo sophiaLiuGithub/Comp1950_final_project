@@ -717,7 +717,7 @@ section.lesson2-container {
       margin: 0; }
 
 section.lesson3-container {
-  margin: 10px 50px; }
+  padding: 2.5rem 1.25rem; }
   section.lesson3-container .lesson3 {
     margin-top: 10px;
     padding: 0px 50px; }
@@ -727,6 +727,23 @@ section.lesson3-container {
     background-color: #C7DFF7; }
   section.lesson3-container .less3-content:nth-child(odd) {
     background-color: #C7F7DF; }
+
+section.outline-container {
+  padding: 2.5rem 1.25rem; }
+  section.outline-container article {
+    padding: 1.25rem; }
+    section.outline-container article p.box-article {
+      padding: 1.25rem;
+      background-color: #e8e8e8;
+      margin: 0 0 1px 0; }
+    section.outline-container article table td {
+      padding: 10px;
+      border: 1px solid #3d69b6; }
+    section.outline-container article table td:first-child {
+      width: 300px; }
+    section.outline-container article table td:nth-child(2) {
+      width: 100px;
+      text-align: center; }
 
 footer .social-content {
   background-color: #3d69b6;
