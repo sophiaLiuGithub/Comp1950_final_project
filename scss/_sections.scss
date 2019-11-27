@@ -364,12 +364,41 @@
 //lessons sub pages layout
 //lesson 3 
 section.lesson3-container{
-    margin: 10px 50px;
+    padding: $padding $half-padding;
+
     .lesson3{
         margin-top:10px;    
         padding:0px 50px;    
     }
     .less3-content:nth-child(odd){
         background-color: gery;
+    }
+}
+
+//outline page layout
+section.outline-container {
+    padding: $padding $half-padding;
+
+    article {
+        padding: $half-padding;
+
+        p.box-article{
+            padding: $half-padding;
+            background-color: $site-lightgray;
+            margin: 0 0 1px 0;
+        }
+        
+        table td {
+            padding: 10px;
+            border: 1px solid $site-lightblue;
+
+        }
+        table td:first-child {
+            width: 300px;
+        }
+        table td:nth-child(2) {
+            width: 100px;
+            text-align: center;
+        }
     }
 }
