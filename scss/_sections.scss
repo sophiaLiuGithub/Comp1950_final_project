@@ -362,6 +362,39 @@
 //lessons page style ends
 
 //lessons sub pages layout
+//lesson 2
+section.lesson2-container{
+    margin: 10px 50px;
+    .lesson2{
+        margin-top:10px;    
+        padding:0px 50px;    
+    }
+    .less2-content{
+        padding: 10px 30px;
+    }
+    .less2-content:nth-child(even){
+        background-color: #C7DFF7;
+    }
+    .less2-content:nth-child(odd){
+        background-color: #C7F7DF;
+    }
+    .less2-image{
+        display: flex;
+        flex-direction: row;          
+    }
+    .img_example{
+        flex:1;
+        border: 5px solid grey;
+        border-radius: 5px;  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  
+        img{
+            margin:0;
+        }         
+    }
+}
 //lesson 3 
 section.lesson3-container{
     margin: 10px 50px;
@@ -369,7 +402,15 @@ section.lesson3-container{
         margin-top:10px;    
         padding:0px 50px;    
     }
-    .less3-content:nth-child(odd){
-        background-color: gery;
+    .less3-content{
+        padding: 10px 30px;
     }
+    
+    .less3-content:nth-child(even){
+        background-color: #C7DFF7;
+    }
+    .less3-content:nth-child(odd){
+        background-color: #C7F7DF;
+    }
+    
 }

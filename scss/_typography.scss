@@ -132,6 +132,36 @@ section.lessons-container .content{
     font-family: $lessons-page-content-font;    
 }
 
+//lessons 2 page typo style
+section.lesson2-container h1{
+    @include lessons-subpage-h1;
+}
+section.lesson2-container h2{
+    @include lessons-subpage-h2;
+}
+section.lesson2-container h3{
+    @include lessons-subpage-h3;
+}
+section.lesson2-container h4{
+    @include lessons-subpage-h4;
+}
+section.lesson2-container p{
+    @include lessons-subpage-p;
+}
+section.lesson2-container span{    
+    @include lessons-subpage-span;
+}
+
+section.lesson2-container .code{    
+    @include lessons-subpage-code;
+}
+
+section.lesson2-container .img_description{
+    font-size: 1.4em;
+    font-weight:bold;
+    text-decoration: underline solid orangered;    
+}
+
 //lessons 3 page typo style
 section.lesson3-container h1{
     @include lessons-subpage-h1;
@@ -148,7 +178,6 @@ section.lesson3-container h4{
 section.lesson3-container p{
     @include lessons-subpage-p;
 }
-
 section.lesson3-container span{    
     @include lessons-subpage-span;
 }
